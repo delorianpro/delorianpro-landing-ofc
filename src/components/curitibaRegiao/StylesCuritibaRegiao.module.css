@@ -1,0 +1,170 @@
+.curitibaRegiaoContainer{
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 0 2rem;
+ }
+ .textImageContainer{
+  display: flex;
+  margin: 0 auto;
+  background: #202222;
+  border-radius: 3.125rem;
+  margin-bottom: 7rem;
+  z-index: 999;
+  margin-top: -16rem;
+  padding: 2rem 0;
+ }
+ .blocoTexto{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 4.375rem;
+  justify-content: center;
+ }
+ .titulo{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.438rem;
+  color: white;
+ }
+ .informacao{
+  font-family: 'Roboto', monospace;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  letter-spacing: 1.5%;
+  color: white;
+ }
+ .buttonChamaDelorian{
+  width: 88%;
+  padding:1.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size:1.25rem;
+  font-weight: 4.375rem;
+  &:hover {
+    cursor: pointer;
+    background-color: #000;
+    }
+ }
+ .blocoImagem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+ .imagemMapa{
+  width: 90%;
+  padding: 2rem;
+ }
+ @media (max-width: 1200px){
+  .titulo{
+    font-size: 2rem;
+    line-height: normal;
+  }
+  .informacao{
+    font-size: 1.125rem;
+  }
+ }
+ @media (max-width: 1000px){
+  .titulo{
+    font-size: 1.75rem;
+  }
+  .informacao{
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  .buttonChamaDelorian{
+    width: 88%;
+    padding: 1.125rem 1rem;
+    font-size: 0.875rem;
+  }
+  .textImageContainer{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: -18rem;
+  }
+  .blocoTexto{
+    padding-left: 2.5rem;
+  }
+  .imagemMapa{
+    width: 100%;
+    padding: 2rem;
+   }
+ }
+ @media (max-width: 800px){
+  .titulo{
+    font-size: 1.563rem;
+  }
+  .informacao{
+    font-size: 0.938rem;
+  }
+  .textImageContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 40.625rem;
+    margin-top: -19rem;
+    padding: 1rem;
+  }
+  .blocoImagem{
+    grid-row: 1;
+    align-items: center;
+  }
+  .blocoTexto{
+    grid-row: 2;
+    margin-top: -2rem;
+  }
+  .imagemMapa{
+    width: 70%;
+  }
+ }
+ @media (max-width: 600px){
+  .textImageContainer{
+    height: 34.375rem;
+    margin-top: -19rem;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .imagemMapa{
+    width: 85%;
+  }
+ }
+ @media (max-width: 500px){
+  .curitibaRegiaoContainer{
+    padding: 0 1rem;
+  }
+  .textImageContainer{
+    height: 37.5rem;
+    margin-top: -10rem;
+    padding: 0 1rem 2rem 1rem;
+  }
+  .imagemMapa{
+    width: 95%;
+    padding: 1rem;
+  }
+  .blocoTexto{
+    padding-left: 1rem;
+  }
+ }
+ @media (max-width: 400px){
+  .textImageContainer{
+    height: 34.375rem;
+  }
+  .imagemMapa{
+    width: 100%;
+    padding: 0 1rem;
+  }
+ }
+ @media (max-width: 300px){
+  .titulo{
+    font-size: 1.125rem;
+  }
+  .informacao{
+    font-size: 0.625rem;
+  }
+  .buttonChamaDelorian{
+    font-size: 0.625rem;
+    padding: 1rem 0.25rem;
+  }
+  .textImageContainer{
+    height: 26.25rem;
+    margin-top: -5rem;
+  }
+ }

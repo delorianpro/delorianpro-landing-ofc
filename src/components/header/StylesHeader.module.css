@@ -1,0 +1,137 @@
+.container {
+  background-color: white;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 1rem;
+}
+.logo {
+  max-width: 35%;
+  display: block;
+  margin-top: 1.2rem;
+  &:hover {
+      cursor: pointer;
+    }
+}
+.nav {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-inicio, .nav-delorianResolve { 
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: auto;
+  height: 3rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+   &:hover {
+    cursor: pointer;
+    border-bottom: 3px solid  #0311FE;
+   }
+  }
+  .nav-delorianResolve{
+    text-align: center;
+  }
+.button{
+  width: 12rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  font-family: var(--font-roboto);
+  background-color: #0311FE;
+  border-style: none;
+  color: white;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+  }
+}
+@media (max-width: 1200px){
+  .nav {
+    gap: 2rem;
+  }
+  .main{
+    gap: 0.5rem;
+  }
+}
+  
+@media (max-width: 1000px){
+  .main {
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .logo {
+    margin: 0 auto;
+    width: 16.875rem;
+    min-width: 16.875rem;
+  }
+  .nav {
+    margin-bottom: 1rem;
+    justify-content: center;
+    gap: 2%;
+  }
+  .nav-inicio, .nav-delorianResolve {
+    background: #E6F0F2;
+    padding: 1.875rem 1.125rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    &:hover {
+      background-color: black;
+      color: white;
+      border: none;
+    }
+  }
+  .button {
+    width: 14rem;
+    height: 4rem;
+}
+}
+@media (max-width: 600px){
+  .main{
+    padding: 1.4rem 2rem;
+  }
+  .nav{
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .nav-inicio, .nav-delorianResolve {
+    font-size: 0.78rem;
+    text-wrap: wrap;
+    text-align: center;
+    height: 3rem;
+    width: auto;
+    padding: 1.2rem 1rem;
+    }
+  .button {
+    font-size: 0.8rem;
+    padding: 1px 1rem;
+    width: 8rem;
+    height: 3rem;
+    }
+  }
+  .logo {
+    margin-top: 1.2rem;
+    width: 16.875rem;
+    height:auto;
+    min-width: 11.875rem;
+}

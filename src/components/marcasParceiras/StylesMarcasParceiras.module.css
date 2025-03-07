@@ -1,0 +1,119 @@
+.marcasParceirasContainer{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.titleEMarcas{
+  max-width: 1605px;
+}
+.backgroundImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.titleContainer{
+  margin: 0 auto;
+  padding-top: 10rem;
+  text-align: center;
+}
+.title{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 3.375rem;
+  line-height: 102%;
+  letter-spacing: -2%;
+  color: white;
+  text-align: center;
+}
+.blocoMarcas{
+  height: auto;
+  width: 65%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 5rem;
+  padding-top: 5rem;
+  margin-bottom: 10rem;
+}
+.peccininLogo, .garenLogo, .niceLogo, .rossiLogo,  .niceLogo, .rossiLogo, .ppaLogo{
+  height: auto;
+  width: 11.25rem;
+} 
+.peccininLogo, .garenLogo {
+  justify-self: flex-start;
+}
+ .niceLogo, .rossiLogo{
+  justify-self: flex-end;
+}
+@media (max-width: 1400px){
+  .backgroundImage{
+    height: 90%;
+  }
+  .titleContainer{
+    padding-top: 8rem;
+  }
+  .title{
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 1200px){
+  .titleContainer{
+    padding-top: 8rem;
+  }
+  .title{
+    font-size: 2.5rem;
+  }
+  .blocoMarcas{
+    gap: 3rem;
+  }
+}
+@media (max-width: 1000px){
+  .title{
+    font-size: 2.3rem;
+  }
+  .blocoMarcas{
+    padding-top: 3.5rem;
+    width: 70%;
+  }
+} 
+@media (max-width: 800px){
+  .backgroundImage{
+    height: 80%;
+  }
+  .titleContainer{
+    padding-top: 5rem;
+    max-width: 85%;
+  }
+  .title{
+    font-size: 1.875rem;
+  }
+  .blocoMarcas{
+    padding-top: 3rem;
+    gap: 2rem;
+    width: 75%;
+  }
+} 
+@media (max-width: 600px){
+  .titleContainer{
+    max-width: 89%;
+  }
+  .title{
+    font-size: 1.563rem;
+  }
+  .blocoMarcas{
+    padding-top: 2.5rem;
+    gap: 1rem;
+    width: 80%;
+  }
+} 
