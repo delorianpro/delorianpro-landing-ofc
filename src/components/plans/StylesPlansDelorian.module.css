@@ -219,7 +219,7 @@
   color: #222222;
 }
 .mesPrata, .formPagamentoPrata{
-  font-size: 0.656;
+  font-size: 0.656rem;
   color: #282828;
 }
 .aPartirPrata{
@@ -407,7 +407,7 @@
   }
   .blockPriceGlobal{
     left: 6rem;
-    bottom: 56.5rem;
+    bottom: 56.8rem;
   }
   .blockPriceDiamante{
     left: 15rem;
@@ -416,7 +416,7 @@
 @media (max-width: 1170px){
   .blockPriceGlobal{
     left: 5.5rem;
-    bottom: 57rem;
+    bottom: 58rem;
   }
   .blockPriceDiamante{
     left: 13.5rem;
@@ -428,7 +428,6 @@
   }
   .blockPriceGlobal{
     left: 5rem;
-    bottom: 58rem;
   }
   .blockPriceDiamante{
     left: 13rem;
@@ -731,7 +730,6 @@
     margin-left: -3.5rem;
     font-size: 1rem;
   }
-
   .blockPriceGlobal{
     left: 7rem;
     bottom: 17.6rem;
