@@ -422,6 +422,21 @@
     left: 13.5rem;
   }
 }
+
+@media (min-width: 1100px) and (max-width: 1130px) {
+  .blockPriceGlobal{
+    bottom: 58rem;
+    left: 4.5rem;
+  }
+  .blockPriceDiamante{
+    left: 13rem;
+  }
+  .plansContainer{
+    gap: 1rem;
+  }
+}
+
+/* 
 @media (max-width: 1122px){
   .plansContainer{
     gap: 1rem;
@@ -432,7 +447,7 @@
   .blockPriceDiamante{
     left: 13rem;
   }
-}
+} */
 @media (max-width: 1100px){
   .plansBg{
     padding-bottom: 2.8rem;
@@ -510,7 +525,7 @@
     bottom: 50.2rem;
   }
 }
-@media (max-width: 900px){
+@media (max-width: 920px){
   .planBlock{
     max-width: 100%;
     width: 31.25rem;
