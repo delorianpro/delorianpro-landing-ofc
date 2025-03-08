@@ -11,7 +11,6 @@ import { Orcamento } from "@/components/orcamentoGratis/OrcamentoGratis";
 import { PlansDelorian } from "@/components/plans/PlansDelorian";
 import { SolucoesDelorian } from "@/components/solucoesDelorian/SolucoesDelorian";
 
-
 export default function Home() {
   return (
     <main>

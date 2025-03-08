@@ -8,22 +8,18 @@ import {Check} from "lucide-react";
 export function PlansDelorian() {
   const phoneNumber = '+5541985011909'; 
   const handleClickPlanBronze = () => {
-    // window.gtag('event', 'conversion', { 'send_to': 'AW-16762428286/MgdfCI6pxuYZEP62-bg-' });
     const whatsappLink = `https://wa.me/${phoneNumber}?text=Olá!%20Tudo%20bem?%20Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Bronze.`;
     window.open(whatsappLink, '_blank'); 
   }
   const handleClickPlanPrata = () => {
-    // window.gtag('event', 'conversion', { 'send_to': 'AW-16762428286/MgdfCI6pxuYZEP62-bg-' });
     const whatsappLink = `https://wa.me/${phoneNumber}?text=Olá!%20Tudo%20bem?%20Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Prata.`;
     window.open(whatsappLink, '_blank'); 
   }
   const handleClickPlanOuro = () => {
-    // window.gtag('event', 'conversion', { 'send_to': 'AW-16762428286/MgdfCI6pxuYZEP62-bg-' });
     const whatsappLink = `https://wa.me/${phoneNumber}?text=Olá!%20Tudo%20bem?%20Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Ouro.`;
     window.open(whatsappLink, '_blank'); 
   }
   const handleClickPlanDiamante = () => {
-    // window.gtag('event', 'conversion', { 'send_to': 'AW-16762428286/MgdfCI6pxuYZEP62-bg-' });
     const whatsappLink = `https://wa.me/${phoneNumber}?text=Olá!%20Tudo%20bem?%20Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Diamante.`;
     window.open(whatsappLink, '_blank'); 
   }
