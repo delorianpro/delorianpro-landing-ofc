@@ -422,10 +422,21 @@
     left: 13.5rem;
   }
 }
-
-@media (min-width: 1100px) and (max-width: 1130px) {
+@media (min-width: 1110px) and (max-width: 1130px) {
   .blockPriceGlobal{
-    bottom: 58rem;
+    bottom: 57.9rem;
+    left: 4.5rem;
+  }
+  .blockPriceDiamante{
+    left: 13rem;
+  }
+  .plansContainer{
+    gap: 1rem;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1110px) {
+  .blockPriceGlobal{
+    bottom: 58.5rem;
     left: 4.5rem;
   }
   .blockPriceDiamante{
@@ -436,18 +447,6 @@
   }
 }
 
-/* 
-@media (max-width: 1122px){
-  .plansContainer{
-    gap: 1rem;
-  }
-  .blockPriceGlobal{
-    left: 5rem;
-  }
-  .blockPriceDiamante{
-    left: 13rem;
-  }
-} */
 @media (max-width: 1100px){
   .plansBg{
     padding-bottom: 2.8rem;
@@ -707,7 +706,7 @@
     height: 8rem;
     width: 8rem;
     left: 9rem;
-    bottom: 17.8rem;
+    bottom: 17.7rem;
   }
   .valorBronze, .valorDiamante, .valorOuro, .valorPrata{
     font-size: 1.7rem;
