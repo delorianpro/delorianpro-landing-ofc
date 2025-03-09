@@ -76,7 +76,7 @@ export function PlansDelorian() {
                   </div>      
               </div>
             </div>
-              <button className={`${styles.btnGlobal} ${styles.btnBronze}`}  onClick={handleClickPlanBronze}>CONTRATAR</button>
+              <button className={`${styles.btnGlobal} ${styles.btnBronze}`}  onClick={handleClickPlanBronze}>SAIBA MAIS</button>
           </div>
           {/* PLANO PRATA */}
           <div className={`${styles.planBlock} ${styles.planPrata}`}>
@@ -117,7 +117,7 @@ export function PlansDelorian() {
                   </div>      
               </div>
             </div>
-              <button className={`${styles.btnGlobal} ${styles.btnPrata}`} onClick={handleClickPlanPrata}>CONTRATAR</button>
+              <button className={`${styles.btnGlobal} ${styles.btnPrata}`} onClick={handleClickPlanPrata}>SAIBA MAIS</button>
           </div>
           {/* PLANO OURO */}
           <div className={`${styles.planBlock} ${styles.planOuro}`}>
@@ -193,7 +193,7 @@ export function PlansDelorian() {
                   </div>      
               </div>
             </div>
-              <button className={`${styles.btnGlobal} ${styles.btnOuro}`} onClick={handleClickPlanOuro}>CONTRATAR</button>
+              <button className={`${styles.btnGlobal} ${styles.btnOuro}`} onClick={handleClickPlanOuro}>SAIBA MAIS</button>
           </div>
           {/* PLANO DIAMANTE */}
           <div className={`${styles.planBlock} ${styles.planDiamante}`}>
@@ -296,7 +296,7 @@ export function PlansDelorian() {
                   </div>      
               </div>
             </div>
-              <button className={`${styles.btnGlobal} ${styles.btnDiamante}`} onClick={handleClickPlanDiamante}>CONTRATAR</button>
+              <button className={`${styles.btnGlobal} ${styles.btnDiamante}`} onClick={handleClickPlanDiamante}>SAIBA MAIS</button>
           </div>
         </div>
     </div>
