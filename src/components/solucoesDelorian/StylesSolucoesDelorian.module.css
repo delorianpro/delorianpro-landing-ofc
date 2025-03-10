@@ -23,6 +23,12 @@
   color: #010549;
   font-family: 'Poppins', sans-serif;
 }
+.delorianResolveDivTitle{
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+  max-width: min-content;
+  gap: 2.5%;
+}
 .problemSolutionContainer{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

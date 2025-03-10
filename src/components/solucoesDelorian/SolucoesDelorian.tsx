@@ -65,7 +65,10 @@ export function SolucoesDelorian() {
           alt={"raio na cor azul"}  
           loading="lazy"        
           />
-        <h1 id="delorianResolveId" className={styles.delorianResolve}>Delorian resolve</h1>
+        <div className={styles.delorianResolveDivTitle}>
+          <h1 id="delorianResolveId" className={styles.delorianResolve}>Delorian</h1>
+          <h2 className={styles.delorianResolve}>resolve</h2>
+        </div>
       </div>
       <div className={styles.problemSolutionContainer}>
         {solucoes.map((service) => (
