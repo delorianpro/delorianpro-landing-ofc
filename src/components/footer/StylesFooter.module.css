@@ -95,7 +95,7 @@
     margin-top: 8rem;
   }
   .whatsappImag, .facebookImag, .instagramImag{
-    height: 0.938rem;
+    height: 1.375rem;
   }
   .redesSociais{
     max-width: 3.375rem;
@@ -120,15 +120,41 @@
 }
 @media (max-width: 500px){
   .whatsappImag, .facebookImag, .instagramImag{
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+  }
+  .footerContainer{
+    padding: 0 1rem;
   }
 }
 @media (max-width: 400px){
+  .footerContainer{
+    padding: 0 0.5rem;
+  }
   .whatsappImag, .facebookImag, .instagramImag{
-    height: 0.75rem;
-    margin-right: 0.8rem;
+    height: 20px;
+    margin-right: 1.8rem;
   }
   .redesSociais{
     max-width: 3.125rem;
    }
+}
+@media (max-width: 350px){
+  .footerContainer{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.5rem;
+  }
+  .direitosReservados{
+    width: auto;
+  }
+  .redesSociais{
+    max-width: min-content;
+    margin-top: 1.2rem;
+  }
+  .whatsappImag, .facebookImag, .instagramImag{
+    height: 30px;
+    margin-right: 2rem;
+    max-width: 100%;
+    padding: 0.4rem;
+  }
 }
