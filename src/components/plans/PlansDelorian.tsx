@@ -24,7 +24,7 @@ export function PlansDelorian() {
     window.open(whatsappLink, '_blank'); 
   }
   return (
-    <div className={styles.plansBg}>
+    <div className={styles.plansBg} id="plansDelorianId">
     <div className={styles.plansSectionContainer}>
         <div className={styles.titlePlansSection}>
           <Image 

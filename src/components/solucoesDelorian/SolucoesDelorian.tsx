@@ -55,7 +55,7 @@ const solucoes = [
 ];
 export function SolucoesDelorian() {
   return (
-    <div className={styles.delorianSolucoesContainer}>
+    <div className={styles.delorianSolucoesContainer} id="delorianResolveId">
       <div className={styles.titleDelorianSolucoes}>
         <Image 
           src={"/assets/raioAzul.png"}
@@ -66,7 +66,7 @@ export function SolucoesDelorian() {
           loading="lazy"        
           />
         <div className={styles.delorianResolveDivTitle}>
-          <h1 id="delorianResolveId" className={styles.delorianResolve}>Delorian</h1>
+          <h1  className={styles.delorianResolve}>Delorian</h1>
           <h2 className={styles.delorianResolve}>resolve</h2>
         </div>
       </div>

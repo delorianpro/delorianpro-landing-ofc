@@ -25,7 +25,7 @@ export default function Header() {
               />
           </Link>
           <nav className={styles.nav}>
-            <Link href="/" className={styles['nav-inicio']}>Início</Link>
+            <Link href="/#plansDelorianId" className={styles['nav-inicio']}>Planos</Link>
             <Link href="/#delorianResolveId" className={styles['nav-delorianResolve']}>Delorian resolve</Link>
             <button className={styles.button} onClick={handleClickTalkWithUs}>Fale conosco</button>
           </nav>
