@@ -19,7 +19,7 @@ export function InfoSection() {
   };
   return (
     <section className={styles.infoContainer}>
-      <Link href="#voltarInicio" passHref>
+      <Link href="#inicioId" passHref>
         <Image src={"/assets/logoDelorian.png"} alt={"Logo Delorian"} width={14584} height={2926} className={styles.delorianlogo} />
       </Link>
       <div className={styles.blocosInfo}>
