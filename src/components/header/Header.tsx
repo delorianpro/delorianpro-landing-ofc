@@ -12,7 +12,7 @@ export default function Header() {
   }
 
   return (
-      <header className={styles.container}> 
+      <header className={styles.container} id="inicioId"> 
         <main className={styles.main}>   
           <Link href="/">
             <Image 
@@ -25,8 +25,10 @@ export default function Header() {
               />
           </Link>
           <nav className={styles.nav}>
-            <Link href="/#plansDelorianId" className={styles['nav-inicio']}>Planos</Link>
-            <Link href="/#delorianResolveId" className={styles['nav-delorianResolve']}>Delorian resolve</Link>
+            <Link href="/#plansDelorianId" className={styles['nav-inicio']} onClick={(e) => { 
+            e.preventDefault();document.getElementById("plansDelorianId")?.scrollIntoView({ behavior: "smooth" });}}>Planos</Link>
+            <Link href="/#delorianResolveId" className={styles['nav-delorianResolve']} onClick={(e) => { 
+            e.preventDefault();document.getElementById("delorianResolveId")?.scrollIntoView({ behavior: "smooth" });}}>Delorian resolve</Link>
             <button className={styles.button} onClick={handleClickTalkWithUs}>Fale conosco</button>
           </nav>
         </main>  
