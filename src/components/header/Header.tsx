@@ -16,7 +16,7 @@ export default function Header() {
         <main className={styles.main}>   
           <Link href="/">
             <Image 
-              src="/assets/logoDelorian.png" 
+              src="/assets/logoDelorian.webp" 
               alt={"Logo Delorian que é o próprio nome da empresa com letra estilizada"} 
               width={270} 
               height={54} 

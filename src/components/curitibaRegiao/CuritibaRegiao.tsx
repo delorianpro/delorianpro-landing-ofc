@@ -19,7 +19,7 @@ export function CuritibaRegiao () {
         </div>
         <div className={styles.blocoImagem}>
           <Image 
-          src={"/assets/mapaCuritibaRegiao.png"} 
+          src={"/assets/mapaCuritibaRegiao.webp"} 
           alt="mapa de Curitiba e região, simbolizando o local de atendimento da Delorian"
           width={800}
           height={1000}

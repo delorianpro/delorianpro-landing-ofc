@@ -18,13 +18,13 @@ export function Footer() {
     <footer className={styles.footerContainer}>
       <div className={styles.redesSociais}>
         <a href="#" onClick={handleRedirectWhatsapp}>
-          <Image src={"/assets/whatsappCopyr.png"} alt={"WhatsApp Icon Copyr"} className={styles.whatsappImag} width={490} height={492} />
+          <Image src={"/assets/whatsappCopyr.webp"} alt={"WhatsApp Icon Copyr"} className={styles.whatsappImag} width={180} height={181} />
         </a>
         <a href="#" onClick={handleRedirectFacebook}>
-          <Image src={"/assets/facebCopyr.png"} alt={"Facebook Icon Copyr"} className={styles.facebookImag} width={490} height={470} />
+          <Image src={"/assets/facebCopyr.webp"} alt={"Facebook Icon Copyr"} className={styles.facebookImag} width={180} height={173} />
         </a>
         <a href="#" onClick={handleRedirectInstagram}>
-          <Image src={"/assets/instaCopyr.png"} alt={"Instagram Icon Copyr"} className={styles.instagramImag} width={490} height={470} />
+          <Image src={"/assets/instaCopyr.webp"} alt={"Instagram Icon Copyr"} className={styles.instagramImag} width={180} height={173} />
         </a>
       </div>
       <div className={styles.direitosReservados}>

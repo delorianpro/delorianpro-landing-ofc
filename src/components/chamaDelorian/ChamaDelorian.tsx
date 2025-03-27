@@ -15,7 +15,7 @@ export function ChamaDelorian() {
           height={126}
           />
         <Image 
-          src={"/assets/moto.png"} 
+          src={"/assets/moto.webp"} 
           className={styles.motoImg}
           alt="imagem de uma moto com design que remete a algo futurístico com a logo da Delorian"
           width={1265}

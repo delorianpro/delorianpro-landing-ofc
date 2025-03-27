@@ -19,18 +19,18 @@ export function BannerSection() {
         </div> 
         <div className={styles.bannerImages}>
           <Image 
-            src="/assets/mascote.png"
+            src="/assets/mascote.webp"
             alt={"raposa preta com a camisa da delorian"}
-            width={272} 
-            height={341} 
+            width={275} 
+            height={345} 
             priority={true}
             className={styles.mascote}
             />
           <Image 
-            src="/assets/portaoeMotor.svg"
+            src="/assets/portaoEmotor.webp"
             alt="Imagem de portão de grade eletrônico cinza e um motor com cremalheira representando o foco da delorian"
-            width={904} 
-            height={739} 
+            width={650} 
+            height={531} 
             priority={true}
             className={styles.portao}
             />

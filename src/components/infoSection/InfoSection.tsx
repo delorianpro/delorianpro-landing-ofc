@@ -20,7 +20,7 @@ export function InfoSection() {
   return (
     <section className={styles.infoContainer}>
       <Link href="#inicioId" passHref>
-        <Image src={"/assets/logoDelorian.png"} alt={"Logo Delorian"} width={14584} height={2926} className={styles.delorianlogo} />
+        <Image src={"/assets/logoDelorian.webp"} alt={"Logo Delorian"} width={14584} height={2926} className={styles.delorianlogo} />
       </Link>
       <div className={styles.blocosInfo}>
         <div className={`${styles.delorianResolve} ${styles.item2}`}>
@@ -41,9 +41,9 @@ export function InfoSection() {
         </div>
         <div className={`${styles.faleConosco} ${styles.item4}`}>
           <h3 className={styles.faleConoscoContatosTitle}>Fale conosco</h3>
-          <a href="#" onClick={handleRedirectWhatsapp}><p className={styles.whatsappText}><Image src={"/assets/whatsIconFooter.svg"} alt="WhatsApp Icon" width={150} height={150} className={styles.whatsappImage} />(41) 9 8501-1909</p></a>
-          <a href="#" onClick={handleRedirectFacebook}><p className={styles.facebookText}><Image src={"/assets/facebookIconFooter.svg"} alt="Facebook Icon" width={150} height={150}  className={styles.facebookImage}/>@delorianpro</p></a>
-          <a href="#" onClick={handleRedirectInstagram}><p className={styles.instagramText}><Image src={"/assets/instagramIconFooter.svg"} alt="Instagram Icon" width={150} height={150} className={styles.instagramImage}/>@delorianpro</p></a>
+          <a href="#" onClick={handleRedirectWhatsapp}><p className={styles.whatsappText}><Image src={"/assets/whatsappCopyr.webp"} alt="WhatsApp Icon" width={180} height={181} className={styles.whatsappImage} />(41) 9 8501-1909</p></a>
+          <a href="#" onClick={handleRedirectFacebook}><p className={styles.facebookText}><Image src={"/assets/facebCopyr.webp"} alt="Facebook Icon" width={180} height={173}  className={styles.facebookImage}/>@delorianpro</p></a>
+          <a href="#" onClick={handleRedirectInstagram}><p className={styles.instagramText}><Image src={"/assets/instaCopyr.webp"} alt="Instagram Icon" width={180} height={173} className={styles.instagramImage}/>@delorianpro</p></a>
         </div>
       </div>
     </section>
