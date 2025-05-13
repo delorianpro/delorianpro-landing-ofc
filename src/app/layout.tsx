@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        <link rel="canonical" href="https://www.delorianpro.com" />
          <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-KHJB6BBN0S"
