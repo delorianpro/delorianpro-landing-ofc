@@ -58,20 +58,20 @@ export function PlansDelorian() {
                     <Check size={20} color="#e08569" className={`${styles.checkIcon} ${styles.checkIconBronze}`}/>
                     <p className={styles.itemList1}> Manutenção Preventiva
                       <span className={styles.parenteses}><br/>1 vez por 
-                      <span className={styles.destaqueTextBronze}> MÊS</span></span>
+                      <span className={styles.destaqueTextBronze}> mês</span></span>
                     </p>
                   </div>
                   <div className={styles.serviceCheckAndText}>
                     <Check size={20} color="#e08569" className={`${styles.checkIcon} ${styles.checkIconBronze}`}/>
-                    <p className={styles.itemList}>Cadastro de até 
+                    <p className={styles.itemList}>Cadastro de Até 
                       <span><br/> <span className={styles.destaqueTextBronze}>05 Controles</span></span>
-                      <span className={styles.parenteses}><br/>(Por Visita)</span>
+                      <span className={styles.parenteses}><br/>(Por visita)</span>
                     </p>                 
                   </div>
                   <div className={styles.serviceCheckAndText}>
                     <Check size={20} color="#e08569" className={`${styles.checkIcon} ${styles.checkIconBronze}`}/>
                     <p className={`${styles.itemList}`}> <span className={styles.destaqueTextBronze}>Relatório de Diagnóstico </span> 
-                      <span className={styles.parenteses}><br/>Técnico Especializado</span>
+                      <span className={styles.parenteses}><br/>Técnico especializado</span>
                     </p>
                   </div>      
               </div>
@@ -95,24 +95,36 @@ export function PlansDelorian() {
               <div className={styles.blockTitleAndServices}>
                 <h3 className={`${styles.titlePlan} ${styles.titlePlanPrata}`}>PRATA</h3>
                 <div className={`${styles.blockServices} ${styles.blockServicePrata}`}>
+                   <div className={styles.serviceCheckAndText}>
+                    <Check size={20} color="#e0dfdf" className={`${styles.checkIcon} ${styles.checkIconPrata}`}/>
+                    <p className={styles.itemList}>Cobertura Total de 
+                      <span className={styles.destaqueTextPrata}><br/>Mão de Obra</span>
+                    </p>                 
+                  </div>
+                   <div className={styles.serviceCheckAndText}>
+                    <Check size={20} color="#e0dfdf" className={`${styles.checkIcon} ${styles.checkIconPrata}`}/>
+                    <p className={styles.itemList}>Atendimento Prioritário 
+                      <span className={styles.destaqueTextPrata}><br/>Prata</span>
+                    </p>                 
+                  </div>
                   <div className={styles.serviceCheckAndText}>
                     <Check size={20} color="#e0dfdf" className={`${styles.checkIcon} ${styles.checkIconPrata}`}/>
                     <p className={styles.itemList1}> Manutenção Preventiva
                       <span className={styles.parenteses}><br/>1 vez por 
-                      <span className={styles.destaqueTextPrata}><b> SEMANA</b></span></span>
+                      <span className={styles.destaqueTextPrata}><b> mês</b></span></span>
                     </p>
                   </div>
                   <div className={styles.serviceCheckAndText}>
                     <Check size={20} color="#e0dfdf" className={`${styles.checkIcon} ${styles.checkIconPrata}`}/>
-                    <p className={styles.itemList}>Cadastro de até 
+                    <p className={styles.itemList}>Cadastro de Até 
                       <span className={styles.destaqueTextPrata}><br/>15 Controles</span>
-                      <span className={styles.parenteses}><br/>(Por Visita)</span>
+                      <span className={styles.parenteses}><br/>(Por visita)</span>
                     </p>                 
                   </div>
                   <div className={styles.serviceCheckAndText}>
                     <Check size={20} color="#e0dfdf" className={`${styles.checkIcon} ${styles.checkIconPrata}`}/>
                     <p className={styles.itemList}> <span className={styles.destaqueTextPrata}>Relatório de Diagnóstico</span>
-                      <span className={styles.parenteses}><br/>Técnico Especializado</span>
+                      <span className={styles.parenteses}><br/>Técnico especializado</span>
                     </p>
                   </div>      
               </div>
@@ -125,7 +137,7 @@ export function PlansDelorian() {
                   <p className={styles.aPartir}>A PARTIR DE</p>
                   <div className={`${styles.blockValue} ${styles.blockValueOuro}`}>
                     <span className={`${styles.realSymbolGlobal} ${styles.realSymbolOuro}`}>R$</span>
-                    <span className={`${styles.valorGlobal} ${styles.valorOuro}`}>1.089</span>
+                    <span className={`${styles.valorGlobal} ${styles.valorOuro}`}>549</span>
                     <div className={styles.blockZeroeMes}>
                       <p className={`${styles.centavosGlobal} ${styles.centavosOuro}`}>,00</p>
                       <p className={`${styles.mesGlobal} ${styles.mesOuro}`}>/mês</p>
@@ -138,8 +150,8 @@ export function PlansDelorian() {
                 <div className={`${styles.blockServices} ${styles.blockServiceOuro}`}>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
                       <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
-                      <p className={`${styles.itemList} ${styles.itemListOuro} `}> <span className={styles.destaqueTextOuro}>Motor Reserva</span>
-                        <span className={styles.corPadrao}><br/>Suporte Imediato para Emergências 
+                      <p className={`${styles.itemList} ${styles.itemListOuro} `}> <span className={styles.destaqueTextOuro}>1 Atendimento <br />Emergencial por Mês</span>
+                        <span className={styles.parentesesOuro}><br/>(Entre 6h e 22h - Todos os dias) 
                         </span>
                       </p>
                   </div>
@@ -152,22 +164,35 @@ export function PlansDelorian() {
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
                     <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
-                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> Troca de <b className={styles.destaqueTextOuro}>Motor</b>
-                      <span ><br/>a cada <b className={styles.destaqueTextOuro}>6 meses</b>
+                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> Cobertura Contra <b className={styles.destaqueTextOuro}>Fenômenos Naturais</b>
+                      <span className={styles.parentesesOuro}><br/>(Raios, chuva, poeira, insetos etc.)
                       </span>
                     </p>
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
                     <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
-                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> Revisão Completa 
-                      <span><br/>a cada <b className={styles.destaqueTextOuro}>6 meses</b>
+                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> Segurança Elétrica
+                      <span><br/> <b className={styles.parentesesOuro}>Garantia contra curtos e instabilidade da rede elétrica</b>
                       </span>
                     </p>
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
                     <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
-                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> <span className={styles.destaqueTextOuro}>5%</span> de <b className={styles.destaqueTextOuro}>Desconto</b>
-                      <span><br/>em outros Serviços 
+                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> <span className={styles.destaqueTextOuro}>Cobertura Total de</span><b className={styles.destaqueTextOuro}>Travas de Segurança</b>
+                      <span><br/>
+                      </span>
+                    </p>
+                  </div>
+                     <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
+                    <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
+                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> <span className={styles.destaqueTextOuro}>Cobertura Total de </span><b className={styles.destaqueTextOuro}>Sensores Anti Esmagamento</b>
+                      <span><br/>
+                      </span>
+                    </p>
+                  </div>
+                     <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
+                    <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
+                    <p className={`${styles.itemList} ${styles.itemListOuro}`}> <span className={styles.destaqueTextOuro}>Atendimento Prioritário Ouro</span><span><br/>
                       </span>
                     </p>
                   </div>
@@ -175,20 +200,20 @@ export function PlansDelorian() {
                     <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
                     <p className={`${styles.itemList} ${styles.itemListOuro}`}> <span className={styles.destaqueTextOuro}>Manutenção Preventiva</span>
                       <span className={styles.parentesesOuro}><br/>(1 vez por
-                      <span><b> SEMANA)</b></span></span>
+                      <span><b> mês)</b></span></span>
                     </p>
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
                     <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
-                    <p className={`${styles.itemList} ${styles.itemListOuro}`}>Cadastro de até 
+                    <p className={`${styles.itemList} ${styles.itemListOuro}`}>Cadastro de Até 
                       <span className={`${styles.amountControls} ${styles.destaqueTextOuro}`}><br/>45 Controles</span>
-                      <span className={styles.parentesesOuro}><br/>(Por Visita)</span>
+                      <span className={styles.parentesesOuro}><br/>(Por visita)</span>
                     </p>                 
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceCheckAndTextOuro}`}>
                     <Check size={20} color="#ffcc00" className={`${styles.checkIcon} ${styles.checkIconOuro}`}/>
                     <p className={`${styles.itemList} ${styles.relatorio} ${styles.itemListOuro} ${styles.destaqueTextOuro}`}>Relatório de Diagnóstico 
-                      <span className={styles.parentesesOuro}><br/>Técnico Especializado</span>
+                      <span className={styles.parentesesOuro}><br/>Técnico especializado</span>
                     </p>
                   </div>      
               </div>
@@ -201,7 +226,7 @@ export function PlansDelorian() {
                   <p className={`${styles.aPartir} ${styles.aPartirDiamante}`}>A PARTIR DE</p>
                   <div className={`${styles.blockValue} ${styles.blockValueDiamante}`}>
                     <span className={`${styles.realSymbolGlobal} ${styles.realSymbolDiamante}`}>R$</span>
-                    <span className={`${styles.valorGlobal} ${styles.valorDiamante}`}>3.490</span>
+                    <span className={`${styles.valorGlobal} ${styles.valorDiamante}`}>790</span>
                     <div className={styles.blockZeroeMes}>
                       <p className={`${styles.centavosGlobal} ${styles.centavosDiamante}`}>,00</p>
                       <p className={`${styles.mesGlobal} ${styles.mesDiamante}`}>/mês</p>
@@ -214,52 +239,17 @@ export function PlansDelorian() {
                 <div className={`${styles.blockServiceDiamante}`}>
                 <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> Assistência<br /><span className={styles.destaqueTextDiamante}>Disponível <br /><span className={styles.vinteQuatroHoras}>24h/dia</span></span>
-                      <span className={styles.parentesesDiamante}><br/>(Todos os dias)</span>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>2&nbsp;Atendimentos Emergenciais <br /><span className={styles.vinteQuatroHoras}>por Mês</span></span>
+                      <span className={styles.parentesesDiamante}><br/>(Entre 6h e 22h - Todos os dias)</span>
                     </p>
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante} ${styles.itemListDiamante6Child}`}> <span className={styles.destaqueTextDiamante}>Segurança Elétrica</span>
-                      <span className={` ${styles.parentesesDiamante}`}><br/>Garantia contra curtos e instabilidades da rede elétrica
-                      </span>
-                    </p>
-                  </div>  
-                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
-                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> Cobertura contra
-                      <span className={styles.destaqueTextDiamante}><br/>Fenômenos <br />Naturais
-                      </span>
-                    </p>
-                  </div>                 
-                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
-                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Atendimento Prioritário</span>
-                      <span className={`${styles.parentesesDiamante}`}><br/>Em até 4h no seu local
-                      </span>
-                    </p>
-                  </div>                  
-                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
-                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> Revisão Completa
-                      <span><br/>a cada <span className={styles.destaqueTextDiamante}>6 meses</span>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>Travas de Segurança Reserva</span>
+                       <span className={styles.parentesesDiamante}><br/>Suporte imediato para emergências
                       </span>
                     </p>
                   </div>
-                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
-                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> Troca de <span className={styles.destaqueTextDiamante}>Motor</span>
-                      <span><br/>a cada <span className={styles.destaqueTextDiamante}>6 meses</span>
-                      </span>
-                    </p>
-                  </div>                                   
-                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
-                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Cobertura Total</span>
-                      <span className={styles.parentesesDiamante}><br/>de Peças e Mão de Obra
-                      </span>
-                    </p>
-                  </div>                                   
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
                     <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Motor Reserva</span>
@@ -269,31 +259,80 @@ export function PlansDelorian() {
                   </div>                  
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>10%</span> de<span className={styles.destaqueTextDiamante}> Desconto</span>
-                      <span className={styles.parentesesDiamante}><br/>Em outros serviços
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Substituição de Cabos de Aço</span>
+                      <span className={`${styles.parentesesDiamante}`}><br/>Quando estiverem desgastados
+                      </span>
+                    </p>
+                  </div> 
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> Cobertura Contra
+                      <span className={styles.destaqueTextDiamante}><br/>Fenômenos <br />Naturais
+                      </span><span className={styles.parentesesDiamante}><br/>(Raios, chuva, poeira, insetos etc.)</span>
+                    </p>
+                  </div>                 
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante} ${styles.itemListDiamante6Child}`}> <span className={styles.destaqueTextDiamante}>Segurança Elétrica</span>
+                      <span className={` ${styles.parentesesDiamante}`}><br/>Garantia contra curtos e instabilidades da rede elétrica
                       </span>
                     </p>
                   </div>  
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>Manutenção Preventiva</span> 
-                      <span className={styles.parentesesDiamante}><br/>(1 vez por 
-                      <span><b> SEMANA)</b></span></span>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}>Atendimento Prioritário<span className={styles.destaqueTextDiamante}> Diamante</span>  
+                    </p>
+                  </div> 
+                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}>Cobertura Total de<span className={styles.destaqueTextDiamante}> Travas de Segurança</span>  
+                    </p>
+                  </div>   
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}>Cobertura Total de<span className={styles.destaqueTextDiamante}> Sensores Anti Esmagamento</span>  
+                    </p>
+                  </div>  
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Cobertura Total</span>
+                      <span className={styles.parentesesDiamante}><br/>de Peças e Mão de Obra
+                      </span>
                     </p>
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>Alinhamento do Portão</span></p>
+                  </div>  
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>Balanceamento do Portão</span></p>
+                  </div>  
+                    <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Relatório de Diagnóstico </span> 
+                      <span className={styles.parentesesDiamante}><br/>Técnico especializado</span>
+                    </p>
+                  </div>                              
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
                     <p className={`${styles.itemList} ${styles.itemListDiamante}`}>Cadastro de até 
-                      <span className={styles.destaqueTextDiamante}><br/>60 controles</span>
+                      <span className={styles.destaqueTextDiamante}><br/>60 Controles</span>
                       <span className={` ${styles.parentesesDiamante}`}><br/>(Por visita)</span>
                     </p>                 
                   </div>
                   <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
                     <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
-                    <p className={`${styles.itemList} ${styles.itemListDiamante}`}> <span className={styles.destaqueTextDiamante}>Relatório de Diagnóstico </span> 
-                      <span className={styles.parentesesDiamante}><br/>Técnico Especializado</span>
+                    <p className={`${styles.itemList} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>Manutenção Preventiva</span> 
+                      <span className={styles.parentesesDiamante}><br/>(1 vez por 
+                      <span><b> mês)</b></span></span>
                     </p>
-                  </div>      
+                  </div>
+                  <div className={`${styles.serviceCheckAndText} ${styles.serviceDiamante}`}>
+                    <Check size={20} color="#FFFFFF" className={`${styles.checkIcon} ${styles.checkIconDiamante}`}/>
+                    <p className={`${styles.itemList1} ${styles.itemListDiamante}`}><span className={styles.destaqueTextDiamante}>Reforço de Soldas</span>
+                    </p>
+                  </div>  
               </div>
             </div>
               <button className={`${styles.btnGlobal} ${styles.btnDiamante}`} onClick={handleClickPlanDiamante}>SAIBA MAIS</button>
