@@ -1,0 +1,165 @@
+.sobreNosComponent{
+  background-color: #010432;
+  padding: 3rem;
+  margin: 0 auto;
+}
+.sobreNosContainer{
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-items: center;
+  justify-content: space-around;
+}
+.titleSobreNosContainer{
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+.iconD{
+ width: 3.5rem;
+}
+.titleSobreNos, .titleContents{
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: auto;
+  letter-spacing: 5%;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+.infoContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+.quemSomosContainer, .nossosValoresContainer{
+  background: #F5F9FA;
+  border-radius: 1.25rem;
+  padding: 4rem 5rem;
+  text-align: flex-start;
+}
+.iconAndText{
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+  width: fit-content;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Roboto', monospace;
+  font-size: 1.188rem;
+  margin-bottom: 1.5rem;
+}
+.iconAndTextSecondBlock{
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+/* .iconAndTextFirstBlock{
+  align-items: center;
+} */
+.paragra{
+  font-family: 'Roboto', monospace;
+  font-size: 1.188rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.titleContents{
+  display: grid;
+  grid-template-columns: auto 5fr;
+  gap: 1rem;
+  max-width: 20rem;
+  margin-bottom: 2.5rem;
+  font-size:1.5rem;
+  align-items: flex-start;
+  font-weight: 900;
+  color: #000000;
+  justify-content: flex-start;
+}
+.titleContentQuemSomos{
+  align-items: center;
+}
+.icons{
+  width: fit-content;
+  background: #0311FE;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.heartIcon{
+  margin-left: -0.7rem;
+}
+.mascoteFace{
+  background: #0311FE;
+  border-radius: 50%;
+  width: 5rem;
+  height: auto;
+  padding: 0.25rem;
+}
+.spanCta{
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  color: #000046;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+
+  &:hover{
+    cursor: pointer;
+    color: #0311FE;
+  }
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 1200px){
+.sobreNosComponent{
+  padding: 1rem;
+  padding-top: 2rem;
+}
+.quemSomosContainer, .nossosValoresContainer{
+    padding: 3rem 4rem;
+}
+}
+@media (max-width: 970px){
+  .titleSobreNos{
+    font-size: 2.3rem;
+  }
+  .titleContentQuemSomos, .titleContents{
+    font-size: 1.4rem;
+  }
+  .titleContents{
+    margin-bottom: 1.5rem;
+  }
+  .paragra{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 900px){
+  .quemSomosContainer, .nossosValoresContainer{
+    padding: 2.5rem 2rem;
+}
+}
+
+@media (max-width: 800px){
+  .quemSomosContainer, .nossosValoresContainer{
+    padding: 2.5rem 2rem;
+}
+  .sobreNosComponent{
+    margin-bottom: 6rem;
+  }
+    .titleContents{
+    margin-bottom: 1rem;
+  }
+  .paragra{
+    font-size: 0.8rem;
+  }
+}
