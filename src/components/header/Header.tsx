@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
       <header className={styles.container} id="inicioId"> 
-        <main className={styles.main}>   
+        <div className={styles.main}>   
           <Link href="/">
             <Image 
               src="/assets/logoDelorian.webp" 
@@ -31,7 +31,7 @@ export default function Header() {
             e.preventDefault();document.getElementById("delorianResolveId")?.scrollIntoView({ behavior: "smooth" });}}>Delorian resolve</Link>
             <button className={styles.button} onClick={handleClickTalkWithUs}>Fale conosco</button>
           </nav>
-        </main>  
+        </div>  
       </header>
   )
 }

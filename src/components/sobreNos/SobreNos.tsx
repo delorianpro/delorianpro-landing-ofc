@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./StylesSobreNos.module.css";
-import { Check, Hammer, Handshake, Heart, Radio, Rocket, Scale, Settings, Wrench } from "lucide-react";
+import { Check, Handshake, Heart, Wrench, Rocket, Scale } from "lucide-react";
 
 export function SobreNos() {
 
@@ -36,26 +36,23 @@ export function SobreNos() {
               <h3 className={styles.titleContentQuemSomos}>Quem somos</h3>
             </div>
             <div>
-              <p className={styles.paragra}>A Delorian nasceu com o propósito de oferecer soluções modernas, seguras e acessíveis para quem precisa automatizar ou manter seu portão eletrônico. Oferecemos um atendimento ágil, técnico e comprometido com a sua satisfação.
-              Somos especializados em:
-            </p>
-              <ul>
-                <li className={`${styles.iconAndText} ${styles.iconAndTextFirstBlock}`}><Wrench size={40} className={styles.icons}/><p className={styles.paragra}><b>Instalação</b></p></li>
-                <li className={`${styles.iconAndText} ${styles.iconAndTextFirstBlock}`}><Settings size={40} className={styles.icons}/><p className={styles.paragra}><b>Manutenção</b></p></li>
-                <li className={`${styles.iconAndText} ${styles.iconAndTextFirstBlock}`}><Hammer size={40} className={styles.icons}/><p className={styles.paragra}><b>Conserto de motores para portões basculantes, pivotantes e deslizantes</b></p></li>
-                <li className={`${styles.iconAndText} ${styles.iconAndTextFirstBlock}`}><Radio size={40} className={styles.icons}/><p className={styles.paragra}><b>Cadastro de controles</b></p></li>
-              </ul>
-              <p className={styles.paragra}>Trabalhamos com as principais marcas do mercado, como PPA, Rossi, Peccinin, Garen, Intelbras e Nice, priorizando qualidade, segurança e confiabilidade.</p>
+              <p className={styles.paragraQuemSomos}>Na Delorian, somos especialistas em automação e manutenção de portões eletrônicos. Atuamos em Curitiba e região metropolitana, sempre com foco na segurança, comodidade e qualidade para nossos clientes.</p>
+              <p className={styles.paragraQuemSomos}>Contamos com técnicos altamente qualificados, prontos para atender desde instalações de motores para portões deslizantes, basculantes e pivotantes até manutenções preventivas e corretivas. Oferecemos planos personalizados que se adaptam às necessidades de cada cliente, proporcionando tranquilidade e suporte contínuo.</p>
+              <p className={styles.paragraQuemSomos}>Trabalhamos com as principais marcas do mercado, como PPA, Rossi, Peccinin, Garen, Intelbras e Nice, priorizando qualidade, segurança e confiabilidade.</p>
+              <p className={styles.paragraQuemSomos}>Valorizamos a transparência, a agilidade e o compromisso com a qualidade. Nosso objetivo é ser sua primeira escolha em automação de portões, construindo relações de confiança e satisfação duradouras.</p>
             </div>
           </div>
           <div className={styles.nossosValoresContainer}>
             <div className={styles.titleContents}><Heart size={70} fill="#0311FE" color="#0311FE" className={styles.heartIcon}/><h3>Nossos valores e Princípios</h3></div>
-            <ul>
-              <li className={`${styles.iconAndText} ${styles.iconAndTextSecondBlock}`}><Check size={40} className={styles.icons}/><p className={styles.paragra}>Atendimento personalizado: vamos até você, com <b>agilidade e sem custo de visita</b>.</p></li>
-              <li className={`${styles.iconAndText} ${styles.iconAndTextSecondBlock}`}><Handshake size={40} className={styles.icons}/><p className={styles.paragra}>Compromisso com o cliente: foco total na <b>sua tranquilidade e satisfação</b>.</p></li>
-              <li className={`${styles.iconAndText} ${styles.iconAndTextSecondBlock}`}><Scale size={40} className={styles.icons}/><p className={styles.paragra}><b>Preço justo:</b> transparência e acessibilidade em todos os serviços.</p></li>
-              <li className={`${styles.iconAndText} ${styles.iconAndTextSecondBlock}`}><Wrench size={40} className={styles.icons}/><p className={styles.paragra}>Excelência técnica: soluções bem feitas, com <b>marcas reconhecidas e profissionais capacitados</b>.</p></li>
-              <li className={`${styles.iconAndText} ${styles.iconAndTextSecondBlock}`}><Rocket size={40} className={styles.icons}/><p className={styles.paragra}><b>Rapidez e eficiência:</b> serviço ágil, sem perder a <b>qualidade</b>.</p></li>
+            <ul className={styles.ulNossosValores}>
+              <li className={styles.iconAndText}><Check size={40} className={styles.icons}/><p className={styles.paragra}>Atendimento personalizado: vamos até você, com <b>agilidade e sem custo de visita</b>.</p></li>
+              <li className={styles.iconAndText}><Handshake size={40} className={styles.icons}/><p className={styles.paragra}>Compromisso com o cliente: foco total na <b>sua tranquilidade e satisfação</b>.</p></li>
+              <li className={styles.iconAndText}><Scale size={40} className={styles.icons}/><p className={styles.paragra}><b>Preço justo:</b> transparência e acessibilidade em todos os serviços.</p></li>
+              <li className={styles.iconAndText}><Wrench size={40} className={styles.icons}/><p className={styles.paragra}>Excelência técnica: soluções bem feitas, com <b>marcas reconhecidas e profissionais capacitados</b>.</p></li>
+              <li className={styles.iconAndText}><Rocket size={40} className={styles.icons}/><p className={styles.paragra}><b>Rapidez e eficiência:</b> serviço ágil, sem perder a <b>qualidade</b>.</p></li>
+              <li className={styles.iconAndText}><Rocket size={40} className={styles.icons}/><p className={styles.paragra}><b>Suporte contínuo</b></p></li>
+              <li className={styles.iconAndText}><Rocket size={40} className={styles.icons}/><p className={styles.paragra}><b>Garantia nos serviços</b></p></li>
+              <li className={styles.iconAndText}><Rocket size={40} className={styles.icons}/><p className={styles.paragra}><b>Soluções sob medida</b></p></li>
             </ul>
             <span onClick={handleRedirectWhatsapp} className={`${styles.paragra} ${styles.spanCta}`}>Precisou? Chama a Delorian.</span>
           </div>

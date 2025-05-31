@@ -14,7 +14,7 @@ import { SolucoesDelorian } from "@/components/solucoesDelorian/SolucoesDelorian
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Header />
       <BannerSection />
       <PlansDelorian />
@@ -28,6 +28,6 @@ export default function Home() {
       <InfoSection />
       <Footer />
       <FloatingWhatsAppButton />
-    </main>
+    </div>
   );
 }

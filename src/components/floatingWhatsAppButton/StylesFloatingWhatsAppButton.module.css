@@ -7,16 +7,15 @@
   padding: 0.25rem;
   bottom: 0.125rem; 
   right: 1rem;
-  width: 5.2rem; 
-  height: 5.2rem;
+  width: 5.5rem; 
+  height: 5.5rem;
   cursor: pointer;
   z-index: 1000;
   border: solid 0.125rem transparent;
   margin: 1rem;
   animation: blink 6s infinite;
     &:hover {
-      width: 5rem; 
-      height: 5rem;
+      transform: scale(1.5);
       animation: none;
     }
   }
@@ -41,8 +40,8 @@
     .whatsappIconFixed {
       bottom: 1vw; 
       right: 0.5vw;
-      width: 3.5rem; 
-      height: 3.5rem;
+      width: 4rem; 
+      height: 4rem;
       position: fixed;
    }
 }

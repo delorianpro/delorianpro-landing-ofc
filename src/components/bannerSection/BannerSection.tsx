@@ -11,7 +11,7 @@ export function BannerSection() {
   }
   return (
     <div className={styles.bannerBg}>
-      <main className={styles.bannerContainer}>
+      <div className={styles.bannerContainer}>
         <div className={styles.bannerTitle}>
           <h2 className={styles.title}>Automação e manutenção de portões eletrônicos</h2>
           <p className= {styles.subtitle}>Instalação, conserto e eficiência.<br/>Solicite seu orçamento grátis!</p>
@@ -35,7 +35,7 @@ export function BannerSection() {
             className={styles.portao}
             />
         </div>    
-      </main>
+      </div>
     </div>
   )
 };
