@@ -182,6 +182,9 @@
     padding-right: 1.7rem;
     border-radius: 1.2rem;
   }
+  .faqContainer{
+    margin-bottom: 2rem;
+  }
 }
 @media(max-width: 370px){
   .titleFaq{
