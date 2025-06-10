@@ -3,7 +3,6 @@ import "./globals.css";
 import { title_font, subtitle_font } from "@/functions/fonts";
 import Script from "next/script";
 
-
 export const metadata: Metadata = {
   title: "Delorian | Automação e Manutenção de portões eletrônicos",
   description: "Automação e manutenção de portões eletrônicos. A Delorian oferece instalção, automação e manutenção de portões eletrônicos, instalação de cremalheiras, conserto de motores. Serviços especializados para segurança e conveniência, vamos até você sem cobrar nada e orçamento também gratuito.",
