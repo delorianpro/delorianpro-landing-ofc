@@ -18,8 +18,8 @@ export default function Home() {
     <div>
       <Header />
       <BannerSection />
-      <PlansDelorian />
       <SolucoesDelorian />
+      <PlansDelorian />
       <ChamaDelorian />
       <CuritibaRegiao />
       <Orcamento />

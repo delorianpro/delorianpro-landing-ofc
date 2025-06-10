@@ -15,7 +15,7 @@ export function CuritibaRegiao () {
         <div className={styles.blocoTexto}>
           <h2 className={styles.titulo}>Atendemos Curitiba e região metropolitana</h2>
           <p className={styles.informacao}>Conserto de portões deslizantes, basculantes e pivotantes.<br/>Vamos até você com eficiência e comodidade!</p>
-          <button onClick={handleClickTalkWithUs} className={styles.buttonChamaDelorian}>CHAMA O DELORIAN</button>
+          <button onClick={handleClickTalkWithUs} className={styles.buttonChamaDelorian}>CHAMA A DELORIAN</button>
         </div>
         <div className={styles.blocoImagem}>
           <Image 

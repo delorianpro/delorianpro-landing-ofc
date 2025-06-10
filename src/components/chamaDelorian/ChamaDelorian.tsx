@@ -8,16 +8,16 @@ export function ChamaDelorian() {
     <div className={styles.chamaDelorianContainer}>
       <div className={styles.motoChamaDelorianContainer}>
         <Image 
-          src={"/assets/chamaDelorian.svg"} 
+          src={"/assets/chamaDelorian.png"} 
           className={styles.chamaDeloriamImage} 
-          alt="texto chama o delorian"
-          width={300}
-          height={126}
+          alt="texto chama a delorian"
+          width={3528}
+          height={1541}
           />
         <Image 
           src={"/assets/moto.webp"} 
           className={styles.motoImg}
-          alt="imagem de uma moto com design que remete a algo futurístico com a logo da Delorian"
+          alt="imagem de uma moto com design que remete a algo futurístico, com a logo da Delorian"
           width={1265}
           height={903}
           />

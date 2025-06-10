@@ -18,6 +18,12 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <link rel="canonical" href="https://www.delorianpro.com" />
+        <meta property="og:title" content="Delorian | Automação e Manutenção de portões eletrônicos" />
+        <meta property="og:description" content="Especialistas em instalação, automação e manutenção de portões eletrônicos. Atendimento rápido, sem custo de visita!" />
+        <meta property="og:url" content="https://www.delorianpro.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.delorianpro.com/imagem-compartilhamento.webp" />
+        <meta property="og:locale" content="pt_BR" />
          <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-KHJB6BBN0S"
