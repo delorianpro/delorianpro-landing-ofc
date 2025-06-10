@@ -20,7 +20,7 @@ export function BannerSection() {
         <div className={styles.bannerImages}>
           <Image 
             src="/assets/mascote.webp"
-            alt={"raposa preta com a camisa da delorian"}
+            alt={"Raposa preta com a camisa da delorian"}
             width={275} 
             height={345} 
             priority={true}
