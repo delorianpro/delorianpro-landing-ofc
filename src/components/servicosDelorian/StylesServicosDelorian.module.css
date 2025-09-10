@@ -1,0 +1,313 @@
+.portaoComProblemasContainer {
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+.portaoComProblemasTitle{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  position: relative;
+}
+.portaoComProblemasSubtitle{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+.portaoComProblemasTitleSubtitleContent{
+  margin-left: 2.7rem;
+  max-width: 95%;
+}
+.title{
+  font-weight: 600;
+}
+.titleh1, .titleSpan{
+  display: inline;
+  font-weight: 800;
+}
+.raioAzul {
+  height: 5rem;
+  width: auto;
+  flex-shrink: 1;
+  position: absolute;
+  left: -2.7rem;
+  top: 1rem;
+}
+.title,
+.titleh1 {
+  font-size: 2.5rem;
+  color: #010549;
+  letter-spacing: 0.05em;
+  font-family: 'Poppins', sans-serif;
+}
+.portaoComProblemasSubtitle, .botaoFaleConosco{
+  font-size: 1.8rem;
+  color: #010549;
+  letter-spacing: 0.04em;
+  font-family: 'Roboto', monospace;
+  width: 100%;
+  font-weight: 300;
+}
+.botaoFaleConosco{
+ border-bottom: 3px solid #0311fe;
+ padding-bottom: 0.5rem;
+
+&:hover {
+    cursor: pointer;
+    font-weight: 400;
+  } 
+}
+.cardsServicesBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 5.5rem;
+  margin-bottom: 2rem;
+}
+.cardService {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.6rem;
+  position: relative;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-family: 'Roboto', monospace;
+  cursor: pointer;
+  &:hover{
+    scale: 1.1;
+  }
+}
+.videoPlay{
+  height: 80%;
+  width: 100%;
+  border-radius: 1.8rem;
+  border: 2px solid  transparent;
+  position: relative;
+
+  &:hover{
+    border: 2px solid #0311fe;
+  }
+}
+.gifStyle{
+  max-height: 344px;
+  max-width: 234px;
+  width: 100%;
+  border-radius: 1.8rem;
+  border: 2px solid  transparent;
+ 
+  &:hover{
+    border: 2px solid #0311fe;
+  }
+}
+.titleCards{
+  font-family: 'Roboto', monospace;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #010549;
+  margin: 0rem 0 0.5rem 0rem;
+  z-index: 999;
+  padding: 0.1rem;  
+  text-align: start;
+}
+.titleCardsContainer{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  min-height: 58px;
+}
+.imageLogtitle{
+  width: 2rem;
+  height: 2rem;
+}
+.circleAnimationPlay{
+  position: absolute;
+  align-self: center;
+  top: 33%;
+  transform: translateY(-40%);
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: 3px solid #0311fe;
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulsar 3s ease-in-out infinite;
+}
+.circleAnimationPlay2{
+  position: absolute;
+  align-self: center;
+  top: 33%;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: 3px solid #0808ec;
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulsar 4s ease-in-out infinite;
+}
+.playIcon{
+  position: absolute;
+  height: 2.6rem;
+  fill: aliceblue;
+  background: #0311fe;
+  width: 20%;
+  border-radius: 50%;
+  padding: 0.6rem 0.4rem;
+  align-self: center;
+  top: 42%;
+  transform: translateY(-50%);
+}
+@keyframes blink {
+  0% {
+    transform: translate(0%, 0%) scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    transform: translate(0%, 0%) scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1.4);
+    opacity: 0;
+  }
+}
+@media(max-width: 1400px){
+  .title,
+  .titleh1 {
+    font-size: 2.3rem;
+}
+  .raioAzul{
+    height: 4.8rem;
+}
+}
+@media(max-width: 1163px){
+  .portaoComProblemasSubtitle, .botaoFaleConosco{
+    margin-top: 0.8rem;
+    line-height: 2.3rem;
+    font-size: 1.72rem;
+  } 
+  .portaoComProblemasTitle{
+    line-height: 2.9rem;
+  }
+  .raioAzul {
+    top: 0.8rem;
+  }
+  .titleCardsContainer{
+    min-height: 74px;
+  }
+  .circleAnimationPlay{
+    top: 29.9%;
+    transform: translateY(-40%);
+    width: 4.9rem;
+    height: 4.9rem;
+}
+  .circleAnimationPlay2{
+    top: 29.9%;
+    transform: translateY(-50%);
+    width: 4.8rem;
+    height: 4.8rem;
+}
+  .playIcon{
+    width: 25%;
+    top: 40%;
+}
+}
+@media(max-width: 1000px){
+  .cardsServicesBlock{
+    gap: 1rem;
+  }
+  .titleCards{
+    font-size: 0.9rem;
+  }
+  .imageLogtitle{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media(max-width: 900px){
+  .cardsServicesBlock{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .circleAnimationPlay{
+    top: 30.2%;
+    transform: translateY(-40%);
+    width: 38%;
+    height: 20%;
+}
+  .circleAnimationPlay2{
+    top: 30.5%;
+    transform: translateY(-50%);
+    width: 38%;
+    height: 20%;
+}
+  .playIcon{
+    width: 25%;
+    height: 12%;
+    top: 40%;
+}
+}
+@media(max-width: 600px){
+  .portaoComProblemasTitle{
+    margin-top: 1.2rem;
+  }
+   .cardsServicesBlock{
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 4rem;
+  }
+  .title,
+  .titleh1 {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+}
+  .portaoComProblemasTitleSubtitleContent{
+    margin-left: 1.48rem;
+    max-width: 95%;
+}
+  .portaoComProblemasSubtitle, .botaoFaleConosco{
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+  .raioAzul{
+    height: 3rem;
+    top: 1.2rem;
+    left: -1.48rem;
+  }
+  .titleCardsContainer{
+    min-height: auto;
+  }
+  .portaoComProblemasContainer{
+    padding: 0 1.25rem;
+  }
+  .playIcon{
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+} 
+@media (max-width: 400px){
+  .circleAnimationPlay{
+    top: 29.8%;
+}
+  .circleAnimationPlay2{
+    top: 30.1%;
+}
+}
+@media(max-width: 364px){
+  .titleCards{
+    min-height: 56px;
+  }
+  .cardsServicesBlock{
+    gap: 0.5rem 1rem;
+  }
+}

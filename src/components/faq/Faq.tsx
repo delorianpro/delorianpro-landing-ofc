@@ -10,7 +10,6 @@ const faqData = [
     question: 'Qual é o custo para consertar um motor elétrico?',
     answer: 'O custo varia conforme o motor, o defeito e a complexidade da instalação. O ideal é que um técnico avalie para indicar a melhor solução. E na Delorian a visita técnica para avaliação é 100% GRATUITA. Fale com a gente!',
     contact:'CLIQUE AQUI E FALE CONOSCO',
-   
   },
   {
     question: 'Meu motor elétrico queimou. É necessário comprar um novo?',

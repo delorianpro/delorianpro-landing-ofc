@@ -8,7 +8,7 @@
   margin: 0 auto;
   background: #202222;
   border-radius: 3.125rem;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
   z-index: 999;
   margin-top: -16rem;
   padding: 2rem 0;
@@ -134,6 +134,7 @@
     height: 37.5rem;
     margin-top: -10rem;
     padding: 0 1rem 2rem 1rem;
+    margin-bottom: 3.2rem;
   }
   .imagemMapa{
     width: 95%;
