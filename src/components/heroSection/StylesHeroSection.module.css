@@ -1,0 +1,357 @@
+.heroComponent{
+  background-color: #ffffff;
+}
+.heroContent{
+  box-sizing: border-box;
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+  padding-bottom: 5rem;
+  gap: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.heroColumnLeft{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #010432;
+  padding: 3rem 2.5rem 3rem 2.5rem;
+  border-radius: 2rem;
+}
+.heroColumnBlockTexts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heroHeadline{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 140%;
+  text-align: center;
+}
+.spanHeadline{
+  font-size: 23px;
+}
+.textBold{
+  font-weight: 600;
+}
+.divSpanBtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+.heroSpan{
+  font-family: 'Roboto', monospace;
+  letter-spacing: 1px;
+  line-height: 112%;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 300;
+  padding-top: 4rem;
+  padding-bottom: 2.95rem;
+  text-align: center;
+  font-weight: 500;
+}
+.mascote{
+  position: absolute;
+  right: -8.5rem;
+  bottom: 0;
+  height: 52%;
+}
+.mascoteBtn{
+  cursor: pointer;
+}
+.button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 24rem;
+  height: 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 100%;
+  outline: none;
+  &:hover {
+      cursor: pointer;
+      background-color: #000004;
+  }
+}
+.heroColumnRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8rem;
+}
+.heroColumnRightTitles{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 200;
+  letter-spacing: 1.6px;
+  line-height: 118%;
+  padding-bottom: 2rem;
+}
+.heroColumnRightBlocks{
+  display: flex;
+  padding-bottom: 5rem;
+  justify-content: space-between;
+}
+.heroColumnRightBlocksLast{
+  padding-bottom: 0;
+}
+.heroColumnRightListItens{
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 0.8rem;
+}
+.heroColumnRightListLink{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: 'Roboto', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  &:hover{
+    color: #0311fe;
+    scale: 1.2;
+    .iconsLinks, .iconsLinksGrid2, .iconsLinksGrid3{
+      padding: 0rem;
+    }
+  }
+}
+.iconsLinks, .iconsLinksGrid2, .iconsLinksGrid3{
+  height: 45px;
+  padding: 0.15rem;
+  width: auto;
+  border-radius: 1rem;
+}
+.iconsLinks{
+  background-color: #451b99;
+  border: 0.20rem solid #b08bfb;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.3);
+}
+.iconsLinksGrid2{
+  background-color: #fc841b;
+  border: 0.20rem solid #f8af6f;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.3);
+}
+.iconsLinksGrid3{
+  background-color: #51b300;
+  border: 0.20rem solid #9fe665;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.3);
+}
+ @media(max-width: 1300px){
+.heroColumnLeft{
+  padding: 4rem 2rem 4rem 2rem;
+}
+.heroColumnRightListLink{
+  font-size: 0.9rem;
+}
+.heroColumnRightBlocks{
+  padding-bottom: 4rem;
+}
+.heroColumnRightBlocksLast{
+  padding-bottom: 0;
+}
+}
+ @media(max-width: 1233px){
+  .heroColumnLeft{
+  padding: 4rem 1rem 4rem 1rem;
+}
+ }
+@media(max-width: 1180px){
+  .heroHeadline{
+    font-size: 1.8rem;
+  }
+  .spanHeadline{
+    font-size: 21px;
+  }
+  .mascote{
+    height: 45%;
+    right: -7rem;  
+}
+.divSpanBtn{
+  margin-left: -3rem;
+}
+.heroColumnRight{
+  padding-left: 6rem;
+}
+.heroColumnRightBlocks{
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+}
+@media(max-width: 1038px){
+  .mascote{
+    height: 45%;
+}
+}
+@media(max-width: 1180px){
+  .heroSpan{
+    padding-bottom: 1rem;
+  }
+}
+@media(max-width: 1000px){
+  .heroContent{
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
+  .heroColumnLeft{
+
+  padding: 2rem 1rem 2rem 1rem;
+    margin-bottom: 2rem;
+}
+  .heroColumnRight{
+  padding-left: 0rem;
+}
+.heroColumnRightBlocks{
+  padding-bottom: 3rem;
+  width: 95%;
+}
+.mascote{
+  right: 0rem;
+  height: 60%;
+}
+.heroHeadline{
+  max-width: 90%;
+  padding-bottom: 2rem;
+}
+.heroSpan{
+  padding-top: 0rem;
+}
+}
+@media(max-width: 850px){
+  .mascote{
+    right: -2rem;
+    height: 45%;
+}
+}
+@media(max-width: 680px){
+  .heroColumnLeft{
+    max-width: auto;
+  }
+  .mascote{
+    height: 50%;
+    right: 2rem;
+}
+.heroHeadline{
+  font-size: 1.2rem;
+  min-width: auto;
+}
+  .spanHeadline{
+    font-size: 14px;
+  }
+
+.heroSpan{
+    font-size: 0.9rem;
+}
+.button{
+  width: auto;
+  font-size:0.9rem;
+  height: auto;
+  padding: 1.2rem 5rem;
+}
+.divSpanBtn{
+  width: auto;
+}
+}
+@media(max-width: 590px){
+  .divSpanBtn{
+    margin-left: 0;
+  }
+  .heroContent{
+    padding: 0 1rem 1rem 1rem;
+  }
+  .heroColumnRight{
+    padding: 1rem 1.5rem;
+  }
+  .heroColumnLeft{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    margin-bottom: 1rem;
+  }
+    .mascote{
+     right: -1rem;
+     height: 35%;
+  }
+
+.heroSpan{
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    max-width: 55%;
+}
+.heroHeadline{
+  font-size: 1.35rem;
+  min-width: auto;
+  max-width: 100%;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+}
+@media(max-width: 500px){
+  .heroSubtitle{
+    padding-bottom: 4rem;
+  }
+}
+@media(max-width: 426px){
+  .heroHeadline{
+    padding-bottom: 3rem;
+  }
+    .button{
+      padding: 1.1rem 2rem;
+}
+.divSpanBtn{
+  margin-left: -5rem;
+}
+ .heroSpan{
+    max-width: 55%;
+    margin-left: 0;
+    padding-top: 1rem;
+  }
+}
+@media(max-width: 390px){
+  .heroColumnLeft{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .heroHeadline{
+    padding-bottom: 3.5rem;
+    font-size: 1.2rem;
+  }
+   .mascote{
+    height: 32%;
+  }
+  .divSpanBtn{
+  margin-left: -3.5rem;
+}
+}
+@media(max-width: 330px){
+  .heroContent{
+    padding: 0 0.5rem;
+  }
+  .heroColumnLeft{
+    padding: 2rem 0.5rem;
+  }
+    .heroHeadline{
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+  }
+  .button{
+    padding: 1rem 1rem;
+    font-size: 0.75rem;
+}
+.divSpanBtn{
+  margin-left: -3.5rem;
+}
+}

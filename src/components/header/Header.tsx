@@ -27,8 +27,8 @@ export default function Header() {
           <nav className={styles.nav}>
             <Link href="/#plansDelorianId" className={styles['nav-inicio']} onClick={(e) => { 
             e.preventDefault();document.getElementById("plansDelorianId")?.scrollIntoView({ behavior: "smooth" });}}>Planos</Link>
-            <Link href="/#delorianResolveId" className={styles['nav-delorianResolve']} onClick={(e) => { 
-            e.preventDefault();document.getElementById("delorianResolveId")?.scrollIntoView({ behavior: "smooth" });}}>Delorian resolve</Link>
+            <Link href={"#servicosDelorianId"} className={styles['nav-delorianResolve']} onClick={(e) => { 
+            e.preventDefault();document.getElementById("servicosDelorianId")?.scrollIntoView({ behavior: "smooth" });}}>Delorian resolve</Link>
             <button className={styles.button} onClick={handleClickTalkWithUs}>Fale conosco</button>
           </nav>
         </div>  
