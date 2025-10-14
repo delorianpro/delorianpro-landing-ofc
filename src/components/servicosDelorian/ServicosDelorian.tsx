@@ -3,8 +3,8 @@
 import Image from "next/image";
 import styles from "./StylesServicosDelorian.module.css"
 import { useEffect, useRef, useState } from "react";
-import { ModalPortaoComProblemas } from "../modalPortaoComProblemas/ModalPortaoComProblemas";
 import { Play } from "lucide-react";
+import { useModal } from "../context/ModalContext";
 
 interface Solucao {
   id: number;
@@ -20,7 +20,7 @@ interface Solucao {
   iconLogoDelorian: { src: string; alt: string; width: number; height: number }[];
 }
 
-const solucoes: Solucao[] = [
+export const solucoes: Solucao[] = [
   {
     id: 1,
     title: "Instalação de motor em portões",
@@ -34,6 +34,19 @@ const solucoes: Solucao[] = [
     classname:"motorImage",
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
     
+  },
+    {
+    id: 11,
+    title: "Controle de acesso",
+    descriptionPrev: "Suporte personalizado para suas...",
+    btnMais: "Ler mais",
+    description: "Suporte personalizado para suas necessidades.",
+    descriptionVideo:"🔒🛡️Modernize a proteção da sua propriedade com sistemas avançados de Controle de Acesso. Utilizamos tecnologia de ponta, como biometria, reconhecimento facial e tags de proximidade, para garantir que apenas pessoas autorizadas tenham acesso.👁️🚪 Tenha total controle sobre quem entra e sai, oferecendo tranquilidade e máxima segurança para sua casa ou condomínio, tudo isso com a praticidade da automação ⚡. Instale um sistema de controle de acesso com biometria ou reconhecimento facial e experimente a segurança e a comodidade 💳🧑‍💻.",
+    gifHover: [{ src: "/assets/gifControlAcesso.gif", alt: "Símbolo de mais, indicando que a Delorian realiza outros serviços além dos citados.", width: 120, height: 120 }],
+    videoModal: "https://www.youtube.com/embed/jjFZFfzH564?si=IvstBc67Ewbl1a1L&rel=0&autoplay=1",
+    imagesThumbNail: [{ src: "/assets/thumbControleDeAcesso.webp", alt: "Imagem de um motor de portão eletrônico", width: 300, height: 450 }],
+    classname:"motorImage",
+    iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
     id: 2,
@@ -150,15 +163,26 @@ const solucoes: Solucao[] = [
     imagesThumbNail: [{ src: "/assets/thumbModWifi.webp", alt: "Imagem de um motor de portão eletrônico", width: 300, height: 450 }],
     classname:"motorImage",
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
-  }
-
+  },
+  {
+    id: 12,
+    title: "Sensores",
+    descriptionPrev: "Suporte personalizado para suas...",
+    btnMais: "Ler mais",
+    description: "Suporte personalizado para suas necessidades.",
+    descriptionVideo:"⚡🔐📍Empresários de Curitiba e Região, a segurança do seu negócio merece tecnologia de ponta e atendimento especializado, e é exatamente isso que a Delorian oferece! Com soluções modernas e eficientes, protegemos comércios, empresas e instituições através de sistemas de segurança de última geração. Instalações completas, reparos ou manutenções, garantimos qualidade, agilidade e garantia nos serviços prestados. ✨ Agende sua visita e descubra como a Delorian pode elevar o nível de proteção do seu negócio. Visita e orçamento gratuitos!✨⚡",
+    gifHover: [{ src: "/assets/gifSensores.gif", alt: "Símbolo de mais, indicando que a Delorian realiza outros serviços além dos citados.", width: 120, height: 120 }],
+    videoModal: "https://www.youtube.com/embed/m_mLNwuep30?si=3m4bjonvT54VWO6R&rel=0&autoplay=1",
+    imagesThumbNail: [{ src: "/assets/thumbSensores2.webp", alt: "Imagem de um motor de portão eletrônico", width: 300, height: 450 }],
+    classname:"motorImage",
+    iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
+  },
 ];
 
 
 export function ServicosDelorian(){
 
-  const [modalAberto, setModalAberto] = useState(false);
-  const [solucaoSelecionada, setSolucaoSelecionada] = useState<Solucao | null>(null);
+  const { abrirModal } = useModal();
   const [showGifs, setShowGifs] = useState<Set<number>>(new Set());
   const [isMobile, setIsMobile] = useState(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -257,10 +281,7 @@ export function ServicosDelorian(){
             ref={(el) => { cardRefs.current[idx] = el }}
             data-id={solucao.id}
             className={styles.cardService}
-            onClick={() => {
-              setSolucaoSelecionada(solucao);
-              setModalAberto(true);
-            }}
+            onClick={() => abrirModal(solucao)} 
             {...(!isMobile && {
               onMouseEnter: () => setShowGifs(new Set([solucao.id])),
               onMouseLeave: () => setShowGifs(new Set()),
@@ -305,16 +326,6 @@ export function ServicosDelorian(){
         ))}
       </div>
 
-      {modalAberto && solucaoSelecionada && (
-        <ModalPortaoComProblemas
-          solucao={solucaoSelecionada}
-          onClose={() => {
-            setModalAberto(false);
-            setSolucaoSelecionada(null);
-          }}
-          modalAberto={modalAberto}
-        />
-      )}
     </div>
   );
 }

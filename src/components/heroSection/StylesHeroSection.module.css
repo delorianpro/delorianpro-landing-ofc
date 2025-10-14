@@ -122,6 +122,10 @@
   font-weight: 500;
   text-align: center;
   width: 100%;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-transform: inherit;
   &:hover{
     color: #0311fe;
     scale: 1.2;
@@ -302,6 +306,11 @@
 @media(max-width: 500px){
   .heroSubtitle{
     padding-bottom: 4rem;
+  }
+}
+@media (max-width: 472px){
+  .heroColumnRightBlocks{
+    padding-bottom: 2rem;
   }
 }
 @media(max-width: 426px){

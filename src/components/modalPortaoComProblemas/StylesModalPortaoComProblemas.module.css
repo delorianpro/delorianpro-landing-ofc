@@ -13,15 +13,15 @@
   margin: 0 auto;   
   display: flex;   
   flex-direction: row;   
-  margin-bottom: 4rem;   
   width: 48%;   
   height: 95vh;   
-  min-height: 650px;  
+  min-height: fit-content;  
   min-width: 58rem; 
   background-color: rgb(255, 255, 255);   
   border-radius: 0.5rem; 
   position: relative;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  height: calc(100vh - 5vh);
 } 
 .modalPortaoComProbVideo, .modalPortaoComProbInfoBlock{   
   flex: 1;
@@ -57,7 +57,8 @@
  }
 }
 .modalPortaoComProbImageEtitle{   
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 3fr;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.4rem ;
@@ -65,16 +66,17 @@
   width: fit-content;
   gap: 0.5rem;
   margin-bottom: 0.8rem;
+  padding: 0.1rem 0 0.1rem 1rem;
 } 
 .modalPortaoComProbTitle{
   width: fit-content;
 }
 .modalPortaoComProbImage{
-  height: 60%;
-  width: 5.8rem;
-  padding: 0.5rem;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
   object-fit: cover;
+  overflow: hidden;
 }
 .modalPortaoComProbDescription, .descripPrevDiv, .modalPortaoComProbAllDescription{
   font-family: 'Roboto', monospace;
@@ -184,11 +186,11 @@
     font-size: 1rem;
   }
   .modalPortaoComProbImage{
-    width: 4rem;
-    height: 3.5rem;
+    width: 50px;
+    height: 50px;
   }
   .modalPortaoComProbImageEtitle{
-    gap: 0.1rem;
+    gap: 0.8rem;
     width: 100%;
     height: fit-content;
     margin-bottom: 0;

@@ -82,13 +82,16 @@ export function ModalPortaoComProblemas( { solucao, onClose, modalAberto }: Moda
         </div>
         <div className={styles.modalPortaoComProbInfoBlock}>
           <div className={styles.modalPortaoComProbImageEtitle}>
-            <Image
-              className={styles.modalPortaoComProbImage}
-              src={solucao.imagesThumbNail[0].src}
-              alt={solucao.imagesThumbNail[0].alt}
-              width={300}
-              height={300}
-            />
+            <div   className={styles.divPortaoComProbImage}>
+                <Image
+                  className={styles.modalPortaoComProbImage}
+                  src={solucao.imagesThumbNail[0].src}
+                  alt={solucao.imagesThumbNail[0].alt}
+                  width={300}
+                  height={300}
+                />
+            </div>
+          
             
             <div className={styles.titleAndClose}><h3 className={styles.modalPortaoComProbTitle}>{solucao.title}</h3> {showAllDescription ? <ChevronDown color='white' className={showAllDescription ? styles.closeAllDescription : styles.hideCloseAllDescriptionBtn} onClick={()=> setShowAllDescription(!showAllDescription)}/> : <ChevronUp color='white' className={styles.closeAllDescription} onClick={()=> setShowAllDescription(!showAllDescription)}/>} </div>
           </div>

@@ -2,17 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { title_font, subtitle_font } from "@/functions/fonts";
 import Script from "next/script";
+import { ModalProvider } from "@/components/context/ModalContext";
+import { ModalGlobal } from "@/components/modalGlobal/ModalGlobal";
 
 export const metadata: Metadata = {
   title: "Delorian | Automação e Manutenção de portões eletrônicos",
   description: "Automação e manutenção de portões eletrônicos. A Delorian oferece instalção, automação e manutenção de portões eletrônicos, instalação de cremalheiras, conserto de motores. Serviços especializados para segurança e conveniência, vamos até você sem cobrar nada e orçamento também gratuito.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="pt-BR">
       <head>
@@ -39,7 +37,10 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${title_font.variable} ${subtitle_font.variable}`}>
-        {children}
+        <ModalProvider >
+          {children}
+          <ModalGlobal />
+        </ModalProvider>
       </body>
     </html>
   );
