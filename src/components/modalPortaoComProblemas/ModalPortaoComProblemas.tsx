@@ -80,7 +80,7 @@ export function ModalPortaoComProblemas( { solucao, onClose, modalAberto }: Moda
             >
             </iframe>)}
         </div>
-        <div className={styles.modalPortaoComProbInfoBlock}>
+        <div className={styles.modalPortaoComProbInfoBlock} onClick={() => setShowAllDescription(!showAllDescription)}>
           <div className={styles.modalPortaoComProbImageEtitle}>
             <div   className={styles.divPortaoComProbImage}>
                 <Image
