@@ -143,6 +143,21 @@
 .hideCloseAllDescriptionBtn{
   display: none;
 }
+.divBtnsShareChevron{
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.8rem;
+}
+.btnShare{
+  height: 2rem;
+  width: auto;
+  color: white;
+  padding: 8px;
+  display: none;
+}
+
+
 @media(max-width: 990px){
 .modalPortaoComProbContent{   
    min-width: 100%; 
@@ -194,6 +209,9 @@
     width: 100%;
     height: fit-content;
     margin-bottom: 0;
+  }
+  .btnShare{
+    display: flex;
   }
   .modalPortaoComProbInfoBlock{
     position: absolute;

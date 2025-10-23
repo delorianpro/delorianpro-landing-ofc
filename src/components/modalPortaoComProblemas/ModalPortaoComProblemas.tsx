@@ -91,8 +91,6 @@ export function ModalPortaoComProblemas( { solucao, onClose, modalAberto }: Moda
                   height={300}
                 />
             </div>
-          
-            
             <div className={styles.titleAndClose}><h3 className={styles.modalPortaoComProbTitle}>{solucao.title}</h3> {showAllDescription ? <ChevronDown color='white' className={showAllDescription ? styles.closeAllDescription : styles.hideCloseAllDescriptionBtn} onClick={()=> setShowAllDescription(!showAllDescription)}/> : <ChevronUp color='white' className={styles.closeAllDescription} onClick={()=> setShowAllDescription(!showAllDescription)}/>} </div>
           </div>
           <div className={styles.descEbtn}>

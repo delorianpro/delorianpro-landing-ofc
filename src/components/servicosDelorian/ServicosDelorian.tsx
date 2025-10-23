@@ -10,7 +10,6 @@ interface Solucao {
   id: number;
   title: string;
   description: string;
-  descriptionPrev: string;
   btnMais: string;
   descriptionVideo: string;
   imagesThumbNail: { src: string; alt: string; width: number; height: number }[];
@@ -24,7 +23,6 @@ export const solucoes: Solucao[] = [
   {
     id: 1,
     title: "Instalação de motor em portões",
-    descriptionPrev: "Instalação especializada de motores para portões...",
     btnMais: "ler mais",
     description: "Instalação especializada de motores para portões deslizantes, basculantes e pivotantes.",
     descriptionVideo:"💥Chega de estresse com seu portão! Instalar um portão automático é a solução ideal para quem ainda utiliza portão manual. Além de oferecer mais segurança, praticidade e comodidade no dia a dia, o portão eletrônico valoriza o imóvel e facilita a entrada e saída sem esforço. Deixa que a Delorian automatiza pra você! Especialista em instalação de motores e automação de portões, oferecemos praticidade, segurança e tecnologia para o seu dia a dia. Atendimento rápido em Curitiba e região metropolitana, com orçamento grátis! ⚡😎",
@@ -38,7 +36,6 @@ export const solucoes: Solucao[] = [
     {
     id: 11,
     title: "Controle de acesso",
-    descriptionPrev: "Suporte personalizado para suas...",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",
     descriptionVideo:"🔒🛡️Modernize a proteção da sua propriedade com sistemas avançados de Controle de Acesso. Utilizamos tecnologia de ponta, como biometria, reconhecimento facial e tags de proximidade, para garantir que apenas pessoas autorizadas tenham acesso.👁️🚪 Tenha total controle sobre quem entra e sai, oferecendo tranquilidade e máxima segurança para sua casa ou condomínio, tudo isso com a praticidade da automação ⚡. Instale um sistema de controle de acesso com biometria ou reconhecimento facial e experimente a segurança e a comodidade 💳🧑‍💻.",
@@ -48,10 +45,22 @@ export const solucoes: Solucao[] = [
     classname:"motorImage",
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
+  
+    {
+    id: 13,
+    title: "Alarmes",
+    btnMais: "Ler mais",
+    description: "Suporte personalizado para suas necessidades.",
+    descriptionVideo:"🔒🛡️ Sua segurança não pode esperar! A Delorian faz instalação de alarmes e sistemas inteligentes que garantem proteção total para empresas, condomínios e residências.🛠️ Trabalhamos com tecnologia de ponta, como sensores de movimento, detectores inteligentes, travas e fechaduras eletrônicas, além de integração com celulares e assistentes virtuais. ⚙️ As melhores marcas, com instalação e suporte garantidos. 🚨 Proteja seu patrimônio e tenha tranquilidade. Agende sua visita técnica gratuita e garanta a segurança do seu espaço com a Delorian!⚡",
+    gifHover: [{ src: "/assets/gifAlarmes.gif", alt: "Símbolo de mais, indicando que a Delorian realiza outros serviços além dos citados.", width: 120, height: 120 }],
+    videoModal: "https://www.youtube.com/embed/Y7BetWfZPQU?si=irCrSqyRCFty6efd&rel=0&autoplay=1",
+    imagesThumbNail: [{ src: "/assets/thumbAlarmes.webp", alt: "Imagem de um motor de portão eletrônico", width: 300, height: 450 }],
+    classname:"motorImage",
+    iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
+  },
   {
     id: 2,
     title: "Motor não funcionando",
-    descriptionPrev: "Diagnóstico e reparos para motores de portões..",
     btnMais: "Ler mais",
     description: "Diagnóstico e reparos para motores de portões eletrônicos travados ou inoperantes.",
     descriptionVideo:"🔎 Quando um portão eletrônico para de funcionar, os motivos podem variar. Pode ser falha no controle remoto, problema na alimentação elétrica, desgaste no motor, mau contato nos componentes internos ou até a presença de insetos, como lagartixas, que podem causar curto ou atrapalhar o funcionamento.🦎 A presença de insetos é mais comum do que parece e pode comprometer o funcionamento de todo o sistema. A melhor forma de identificar a causa exata é fazer uma vistoria técnica no sistema.🔧 E essa visita é gratuita na Delorian.⚡",
@@ -63,7 +72,6 @@ export const solucoes: Solucao[] = [
   },
   { id: 3,
     title: "Motor sem força",
-    descriptionPrev: "Correção de motores fracos por desgaste, sobrecarga ou...",
     btnMais: "Ler mais",
     description: "Correção de motores fracos por desgaste, sobrecarga ou falhas elétricas.",
     descriptionVideo:"⚠️ Após uma instabilidade de energia na rede elétrica, é comum que o motor do portão apresente perda de potência. Mas esse não é o único motivo: capacitor fraco, desgaste interno de peças, falha na placa eletrônica, falta de lubrificação ou até o desalinhamento do portão podem causar lentidão no sistema. A Delorian é especialista em instalação, manutenção e automação de portões, garantindo mais segurança, praticidade e o funcionamento perfeito para o seu dia a dia. 😁 Resolva a lentidão do seu portão com a Delorian agora! ⚡🚀🔧",
@@ -76,7 +84,6 @@ export const solucoes: Solucao[] = [
   {
     id: 4,
     title:"Motor indo só para um lado",
-    descriptionPrev: "Ajustes para motores que só...",
     btnMais: "Ler mais",
     description: "Ajustes para motores que só se movem para um lado.",
     descriptionVideo:"Portão só abre ou só fecha? 🚪⚠️ Se o motor do seu portão eletrônico está funcionando apenas em uma direção, isso pode indicar diversos problemas. Entre as causas mais comuns estão:🔧 Placa eletrônica danificada ou com falha de programação;⚡ Instabilidade elétrica;🛠️ Fim de curso desajustado ou com mau contato;⚙️ Desgaste interno do motor;🔌 Fiação elétrica solta;🚪 Portão desalinhado ou pesado. A Delorian é especialista em conserto de motores para portão eletrônico. Chame a Delorian e aproveite: visita 100% gratuita!🚀",
@@ -89,7 +96,6 @@ export const solucoes: Solucao[] = [
   {
     id: 5,
     title:"Motor barulhento",
-    descriptionPrev: "Soluções para motores barulhentos com ruídos...",
     btnMais: "Ler mais",
     description: "Soluções para motores barulhentos com ruídos de atrito, rangidos ou estalos.",
     descriptionVideo:"🔊🚪 Se o motor do seu portão eletrônico está barulhento, isso pode ser sinal de falta de lubrificação, rolamentos gastos, engrenagens danificadas, peças internas desgastadas ou até mau alinhamento do portão, que força todo o sistema. ⚠️ Ignorar o problema pode causar danos maiores e comprometer a segurança da sua casa. ✨ A Delorian é especialista em manutenção e instalação de portões eletrônicos, garantindo mais tranquilidade, praticidade e segurança para você.📍Atendemos Curitiba e região metropolitana com orçamento grátis. Chame a Delorian!⚡",
@@ -102,7 +108,6 @@ export const solucoes: Solucao[] = [
   {
     id: 6,
     title: "Portão batendo",
-    descriptionPrev: "Soluções para portões que batem ao fechar...",
     btnMais: "Ler mais",
     description: "Soluções para portões que batem ao fechar, causando impactos excessivos e ruídos.",
     descriptionVideo:"🔇 Diga ADEUS ao barulho do portão batendo! Esse incômodo pode ser causado por falta de regulagem, molas ou amortecedores gastos, desalinhamento ou falha nos fins de curso. ✨ A solução definitiva é a Parada Suave, que garante um fechamento silencioso, seguro e duradouro. ⚡ Confira a explicação do nosso técnico e descubra como transformar o funcionamento do seu portão. 📍Atendemos Curitiba e região metropolitana com orçamento grátis. 🔧🚪 Chame a Delorian e tenha mais conforto e segurança com seu portão automático!🚪✨",
@@ -115,7 +120,6 @@ export const solucoes: Solucao[] = [
   {
     id: 7,
     title: "Cadastro de controle de portão",
-    descriptionPrev: "Facilitamos a programação e sincronização...",
     btnMais: "Ler mais",
     description: "Facilitamos a programação e sincronização dos seus dispositivos.",
     descriptionVideo:"🔑 Facilitamos a programação e sincronização dos seus dispositivos. Na Delorian, você pode fazer o cadastro de controles para portões eletrônicos de forma rápida e segura 📝. Também temos controles novos e originais, garantindo compatibilidade e funcionamento perfeito ⚡. Seja para substituição de controles antigos, aumento da quantidade de controles ou instalação de portões automáticos, a Delorian oferece atendimento em Curitiba e região metropolitana e orçamento grátis.⚡📍💰",
@@ -128,7 +132,6 @@ export const solucoes: Solucao[] = [
   {
     id: 8,
     title: "TX-Car: Abra seu portão com o farol",
-    descriptionPrev: "Dispositivo inovador que transforma o...",
     btnMais: "Ler mais",
     description: "Dispositivo inovador que transforma o farol alto em chave do portão",
     descriptionVideo:"A Delorian traz pra você o TX-CAR: o controle invisível que abre o portão com um simples toque no farol! 🚗✨ Chega de controles perdidos ou falhando!🔦 Acione a luz alta e veja o portão abrir. Com o TX-CAR, você ganha mais praticidade e conforto no dia a dia, aproveitando todo o potencial do seu portão eletrônico sem esforços ou riscos desnecessários. Uma tecnologia já conhecida no mercado, agora com instalação personalizada, discreta e com o padrão de qualidade Delorian! Para agendar instalação, só clicar no botão abaixo e falar conosco.✨📞",
@@ -141,7 +144,6 @@ export const solucoes: Solucao[] = [
    {
     id: 9,
     title: "Fotocélula (Anti-esmagamento)",
-    descriptionPrev: "Sensor que detecta obstáculos e impede o portão...",
     btnMais: "Ler mais",
     description: "Sensor que detecta obstáculos e impede o portão de fechar para evitar acidentes.",
     descriptionVideo: "A fotocélula, também chamada de sensor antiesmagamento, é um sensor de segurança essencial para portões automáticos. Ele percebe quando algo, como uma pessoa, carro ou animal, está no caminho enquanto o portão está fechando. Se isso acontecer, o portão para ou volta a abrir, evitando acidentes. Com o sensor antiesmagamento, você protege quem você mais ama, incluindo seus pets! 🌟🐾 Além de oferecer segurança, ele garante tranquilidade para toda a família, tornando o uso do seu portão automático muito mais seguro e confiável. 👨‍👩‍👧‍👦",
@@ -154,7 +156,6 @@ export const solucoes: Solucao[] = [
    {
     id: 10,
     title: "Módulo Wi-fi: Portão inteligente",
-    descriptionPrev: "Suporte personalizado para suas...",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",
     descriptionVideo:"📶🚪Transforme seu portão eletrônico em um portão inteligente! Com o módulo Wi-Fi, seu portão automático se torna um sistema conectado e moderno. Abra e feche pelo celular 📱 ou por assistentes virtuais como Alexa 🗣️, com praticidade, segurança e total controle. Tenha mais conforto no dia a dia, monitore quem acessa sua casa e modernize seu portão sem complicações. Fácil de instalar e totalmente compatível com seu motor, ele leva seu portão para o mundo digital, unindo tecnologia e comodidade ⚡.",
@@ -167,7 +168,6 @@ export const solucoes: Solucao[] = [
   {
     id: 12,
     title: "Sensores",
-    descriptionPrev: "Suporte personalizado para suas...",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",
     descriptionVideo:"⚡🔐📍Empresários de Curitiba e Região, a segurança do seu negócio merece tecnologia de ponta e atendimento especializado, e é exatamente isso que a Delorian oferece! Com soluções modernas e eficientes, protegemos comércios, empresas e instituições através de sistemas de segurança de última geração. Instalações completas, reparos ou manutenções, garantimos qualidade, agilidade e garantia nos serviços prestados. ✨ Agende sua visita e descubra como a Delorian pode elevar o nível de proteção do seu negócio. Visita e orçamento gratuitos!✨⚡",

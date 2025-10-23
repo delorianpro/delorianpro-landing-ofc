@@ -44,7 +44,7 @@ const { abrirModal } = useModal();
         <div className={styles.heroColumnRightBlocks}>
           <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Controle de acesso"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/cadeBlueIcon.webp" alt={"Ícone de um cadeado na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Controle de <br /> acesso</Link></div>
           <div className={styles.heroColumnRightListItens}> <Link href={"#servicosDelorianId"} className={styles.heroColumnRightListLink}><Image src="/assets/portSoBlueIcon.webp" alt={"Ícone de uma porta na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Porta <br />social</Link></div>
-          <div className={styles.heroColumnRightListItens}> <Link href={"#servicosDelorianId"} className={styles.heroColumnRightListLink}><Image src="/assets/alarmIcon.webp" alt={"Ícone de uma sirene na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Alarmes</Link></div>
+          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Alarmes"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/alarmIcon.webp" alt={"Ícone de uma sirene na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Alarmes</Link></div>
         </div>
       </div>
       <div>
