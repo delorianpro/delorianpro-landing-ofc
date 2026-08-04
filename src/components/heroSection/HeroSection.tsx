@@ -37,18 +37,35 @@ const { abrirModal } = useModal();
             priority={true}
             className={styles.mascote}
           /></button>
+
+            {/* <video
+             className={styles.mascote}
+            autoPlay
+            muted
+            loop
+            playsInline
+           
+          >
+            <source src="/assets/mascote-selecao-uniforme.webm" type="video/webm" /> 
+          </video> */}
     </div>
     <div className={styles.heroColumnRight}>
       <div>
         <h3 className={styles.heroColumnRightTitles}>CUIDAMOS DA SUA EMPRESA</h3>
         <div className={styles.heroColumnRightBlocks}>
           <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Controle de acesso"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/cadeBlueIcon.webp" alt={"Ícone de um cadeado na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Controle de <br /> acesso</Link></div>
-          <div className={styles.heroColumnRightListItens}> <Link href={"#servicosDelorianId"} className={styles.heroColumnRightListLink}><Image src="/assets/portSoBlueIcon.webp" alt={"Ícone de uma porta na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Porta <br />social</Link></div>
+          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Porta social"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/portSoBlueIcon.webp" alt={"Ícone de uma porta na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Porta <br />social</Link></div>
           <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Alarmes"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/alarmIcon.webp" alt={"Ícone de uma sirene na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Alarmes</Link></div>
         </div>
       </div>
       <div>
-        <h3 className={styles.heroColumnRightTitles}>CUIDAMOS DO SEU CONDOMÍNIO</h3>
+        <h3 className={`${styles.heroColumnRightTitles} ${styles.heroColumnRightTitleCondominio}`}>CUIDAMOS DO SEU CONDOMÍNIO</h3>
+         <div className={styles.componentBtnEiSindico}>
+      <Link className={styles.btnEiSindico} href={"#bannerSindico-sessao"} >
+        <span className={styles.iconeHand}>👉</span>
+        <span className={styles.textEiSindico}>Ei, <b>Síndico</b>! Clique aqui.</span>
+      </Link>
+    </div>
         <div className={styles.heroColumnRightBlocks}>
           <div className={styles.heroColumnRightListItens}> <Link href={"#servicosDelorianId"} className={styles.heroColumnRightListLink}><Image src="/assets/cancelIcon2.webp" alt={"Ícone de uma cancela na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinksGrid2}/>Cancela</Link></div>
           <div className={styles.heroColumnRightListItens}> <Link href={"#servicosDelorianId"} className={styles.heroColumnRightListLink}><Image src="/assets/interfoneIcon.webp" alt={"Ícone de um interfone na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinksGrid2}/>Interfones</Link></div>

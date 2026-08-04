@@ -1,3 +1,8 @@
+'use client' //novo
+
+
+import { BannerSindico } from "@/components/bannerSindico/BannerSindico";
+import { BtnEiSindico } from "@/components/btnEiSindico/BtnEiSindico";
 import { CardList } from "@/components/cardList/CardList";
 import { ChamaDelorian } from "@/components/chamaDelorian/ChamaDelorian";
 import { CuritibaRegiao } from "@/components/curitibaRegiao/CuritibaRegiao";
@@ -12,18 +17,28 @@ import { PlansDelorian } from "@/components/plans/PlansDelorian";
 import { ServicosDelorian } from "@/components/servicosDelorian/ServicosDelorian";
 import { SobreNos } from "@/components/sobreNos/SobreNos";
 
+import { useState } from "react"; //novo
+
+
+
 export default function Home() {
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null); //novo
+
+
   return (
     <div>
       <Header />
+      <BtnEiSindico />
       <HeroSection />
       <ServicosDelorian />
+      <BannerSindico setOpenIndex={setOpenIndex}/>
       <PlansDelorian />
       <ChamaDelorian />
       <CuritibaRegiao />
       <CardList />
       <MarcasParceiras />
-      <Faq />
+      <Faq openIndex={openIndex} setOpenIndex={setOpenIndex}/>
       <SobreNos />
       <InfoSection />
       <Footer />

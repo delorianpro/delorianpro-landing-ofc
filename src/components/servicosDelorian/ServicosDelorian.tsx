@@ -34,7 +34,7 @@ export const solucoes: Solucao[] = [
     
   },
     {
-    id: 11,
+    id: 2,
     title: "Controle de acesso",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",
@@ -47,7 +47,7 @@ export const solucoes: Solucao[] = [
   },
   
     {
-    id: 13,
+    id: 3,
     title: "Alarmes",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",
@@ -59,7 +59,19 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 2,
+    id: 4,
+    title: "Porta social",
+    btnMais: "Ler mais",
+    description: "Suporte personalizado para suas necessidades.",
+    descriptionVideo:"🛡️🛠️💪 Chega de brigar com o seu portão! Tá cansado de lutar toda vez que precisa abrir na mão? 😅 Automatize e tenha mais praticidade, conforto e, principalmente, SEGURANÇA no seu dia a dia.  🚪 Trabalhamos com: Portas sociais, Portas de enrolar, Portões basculantes, Portões deslizantes, Portões pivotantes e muito mais. Torne-se amigo do seu portão. Seja para corrigir falhas, melhorar a segurança ou instalar uma nova estrutura, garantimos um serviço eficiente, durável e alinhado às necessidades do seu espaço. Chame a Delorian! 😉⚡",
+    gifHover: [{ src: "/assets/gifPortaSocial.gif", alt: "Símbolo de mais, indicando que a Delorian realiza outros serviços além dos citados.", width: 120, height: 120 }],
+    videoModal: "https://www.youtube.com/embed/H4iPXcnRFsE?si=3i0eKVSUhKZLgaah&rel=0&autoplay=1",
+    imagesThumbNail: [{ src: "/assets/thumbPortSocial.webp", alt: "Imagem de um motor de portão eletrônico", width: 300, height: 450 }],
+    classname:"motorImage",
+    iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
+  },
+  {
+    id: 5,
     title: "Motor não funcionando",
     btnMais: "Ler mais",
     description: "Diagnóstico e reparos para motores de portões eletrônicos travados ou inoperantes.",
@@ -70,7 +82,7 @@ export const solucoes: Solucao[] = [
     classname:"motorImage",
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
-  { id: 3,
+  { id: 6,
     title: "Motor sem força",
     btnMais: "Ler mais",
     description: "Correção de motores fracos por desgaste, sobrecarga ou falhas elétricas.",
@@ -82,7 +94,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 4,
+    id: 7,
     title:"Motor indo só para um lado",
     btnMais: "Ler mais",
     description: "Ajustes para motores que só se movem para um lado.",
@@ -94,7 +106,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 5,
+    id: 8,
     title:"Motor barulhento",
     btnMais: "Ler mais",
     description: "Soluções para motores barulhentos com ruídos de atrito, rangidos ou estalos.",
@@ -106,7 +118,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 6,
+    id: 9,
     title: "Portão batendo",
     btnMais: "Ler mais",
     description: "Soluções para portões que batem ao fechar, causando impactos excessivos e ruídos.",
@@ -118,7 +130,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 7,
+    id: 10,
     title: "Cadastro de controle de portão",
     btnMais: "Ler mais",
     description: "Facilitamos a programação e sincronização dos seus dispositivos.",
@@ -130,7 +142,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 8,
+    id: 11,
     title: "TX-Car: Abra seu portão com o farol",
     btnMais: "Ler mais",
     description: "Dispositivo inovador que transforma o farol alto em chave do portão",
@@ -142,7 +154,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
    {
-    id: 9,
+    id: 12,
     title: "Fotocélula (Anti-esmagamento)",
     btnMais: "Ler mais",
     description: "Sensor que detecta obstáculos e impede o portão de fechar para evitar acidentes.",
@@ -154,7 +166,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
    {
-    id: 10,
+    id: 13,
     title: "Módulo Wi-fi: Portão inteligente",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",
@@ -166,7 +178,7 @@ export const solucoes: Solucao[] = [
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
   {
-    id: 12,
+    id: 14,
     title: "Sensores",
     btnMais: "Ler mais",
     description: "Suporte personalizado para suas necessidades.",

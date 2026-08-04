@@ -100,6 +100,7 @@ export function ModalPortaoComProblemas( { solucao, onClose, modalAberto }: Moda
           <button className={styles.modalPortaoComProbBtn} onClick={handleClickTalkWithUs}>Agendar visita gratuita</button>
         </div>
         <span className={styles.modalPortaoComProbBtnClose} onClick={onClose} ><X  size={14} strokeWidth={4}/></span>
+
       </div>
     </div>
   )

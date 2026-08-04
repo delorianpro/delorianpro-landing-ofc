@@ -30,6 +30,9 @@
   color: black;
   margin-bottom: 1rem;
 }
+.delorianResolveTitleBlock{
+    margin-bottom: 1rem;
+}
 .delorianResolveTitle{ 
   &:hover {
     cursor: pointer;
@@ -49,9 +52,15 @@
   display: flex;
   flex-direction: column;
 }
+.divLinks{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  row-gap: 0rem;
+  align-items: flex-start;
+}
 .delorianSolu{
   font-weight: 500;
-  margin-top: 0.625rem;
 }
 .whatsappText, .facebookText, .instagramText{
   display: flex;
@@ -79,9 +88,6 @@
   .delorianResolveTitle, .funcionamentoTitle, .faleConoscoContatosTitle{
     font-size: 1.25rem;
   }
-  .delorianSoluFirstChild{
-    margin-top: 1.1rem;
-  }
   .delorianSolu, .text, .whatsappText, .facebookText, .instagramText{ 
     font-size: 1.125rem;
   }
@@ -98,15 +104,15 @@
   .delorianResolveTitle, .funcionamentoTitle, .faleConoscoContatosTitle{
     font-size: 1.125rem;
   }
-  .delorianSoluFirstChild{
-    margin-top: 1.1rem;
-  }
   .delorianSolu, .text, .whatsappText, .facebookText, .instagramText{
     font-size: 0.875rem;
   }
   .delorianlogo{
     width: 9.375rem;
     height: auto;
+  }
+  .delorianSolu{
+    margin-top: 0;
   }
 }
 @media (max-width: 900px){
@@ -193,24 +199,20 @@
  .delorianResolveTitle, .funcionamentoTitle, .faleConoscoContatosTitle{
     font-size: 0.938rem;
     margin-bottom: 0.8rem;
-    padding-top: 0.5rem;
     line-height: 100%;
     font-weight: 700;
-  }
-  .delorianResolve{
-    margin-top: 0.3rem;
   }
   .delorianSolu, .text, .whatsappText, .facebookText, .instagramText{
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
   }
-  .delorianSolu{
-    margin-bottom: 0.1rem;
-  }
   .facebookImage, .instagramImage, .whatsappImage{
     height: 0.95rem;
     width: 0.95rem;
+    margin-top: 0;
+  }
+  .divLinks{
     margin-top: 0;
   }
 }
@@ -219,16 +221,28 @@
     margin-top: 1rem;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 350px) {
+  .blocosInfo{
+    gap: 2rem;
+    row-gap: 1rem;
+  }
+}
+@media (max-width: 330px) {
+  .blocosInfo{
+    padding: 2rem 0.5rem;
+  }
   .infoContainer{
     margin-top: -1rem;
   }
   .delorianResolveTitle, .funcionamentoTitle, .faleConoscoContatosTitle{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     margin-bottom: 0.5rem; 
   }
+  .delorianResolveTitleBlock{
+    margin-bottom: 0.5rem;
+  }
   .delorianSolu, .text, .whatsappText, .facebookText, .instagramText{
-    font-size: 0.438rem;
+    font-size: 0.738rem;
     margin-bottom: 0.4rem;
     margin-top: 0.063rem;
     gap: 0.4rem;
@@ -236,20 +250,8 @@
   .delorianlogo{
     margin-bottom: 0;
   }
-  .blocosInfo{
-    gap: 1rem;
-  }
-  .delorianResolveTitle{
-    font-size: 0.5rem;
-  }
-  .delorianSoluFirstChild{
-    margin-top: 0.313rem;
-  }
   .facebookImage, .instagramImage, .whatsappImage{
     height: 0.625rem;
     width: 0.625rem;
-  }
-  .delorianResolve{
-    margin-top: 0rem;
   }
 }

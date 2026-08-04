@@ -3,8 +3,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './StylesInfoSection.module.css';
+import { useModal } from '../context/ModalContext';
+import { solucoes } from '../servicosDelorian/ServicosDelorian';
 
 export function InfoSection() {
+
+  const { abrirModal } = useModal();
+
+
   const phoneNumber = '+5541985011909';
   
   const handleRedirectWhatsapp = () => {
@@ -24,14 +30,37 @@ export function InfoSection() {
       </Link>
       <div className={styles.blocosInfo}>
         <div className={`${styles.delorianResolve} ${styles.item2}`}>
-          <h3><Link href="#delorianResolveId" className={styles.delorianResolveTitle}>Delorian resolve</Link></h3>
-          <Link href="/#delorianResolveId" className={`${styles.delorianSolu} ${styles.delorianSoluFirstChild}`}>Instalação de motor em portões</Link>
-          <Link href="/#delorianResolveId" className={styles.delorianSolu}>Motor não funcionando</Link>
-          <Link href="/#delorianResolveId" className={styles.delorianSolu}>Motor sem força</Link>
-          <Link href="/#delorianResolveId" className={styles.delorianSolu}>Motor indo só para um lado</Link>
-          <Link href="/#delorianResolveId" className={styles.delorianSolu}>Motor barulhento</Link>
-          <Link href="/#delorianResolveId" className={styles.delorianSolu}>Portão batendo</Link>
-          <Link href="/#delorianResolveId" className={styles.delorianSolu}>Cadastro de controles</Link>
+          <h3 className={styles.delorianResolveTitleBlock}><Link href="#delorianResolveId" className={styles.delorianResolveTitle}>Delorian resolve</Link></h3>
+          
+          <div className={`${styles.delorianResolve} ${styles.divLinks}`}>
+
+
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Instalação de motor em portões"))!)} className={`${styles.delorianSolu} ${styles.delorianSoluFirstChild}`}>Instalação de motor em portões</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Controle de acesso"))!)} className={styles.delorianSolu}>Controle de acesso</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Alarmes"))!)} className={styles.delorianSolu}>Alarmes</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("TX-Car"))!)} className={styles.delorianSolu}>TX-Car</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Motor indo só para um lado"))!)} className={styles.delorianSolu}>Motor indo só para um lado</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Módulo Wi-fi"))!)} className={styles.delorianSolu}>Módulo Wi-fi</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Portão batendo"))!)} className={styles.delorianSolu}>Portão batendo</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Motor sem força"))!)} className={styles.delorianSolu}>Motor sem força</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Motor não funcionando"))!)} className={styles.delorianSolu}>Motor não funcionando</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Porta social"))!)} className={styles.delorianSolu}>Porta social</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Cadastro de controle"))!)} className={styles.delorianSolu}>Cadastro de controles</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Fotocélula"))!)} className={styles.delorianSolu}>Fotocélula</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Motor barulhento"))!)} className={styles.delorianSolu}>Motor barulhento</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Sensores"))!)} className={styles.delorianSolu}>Sensores</Link>
+          </div>
+         
+
+          
+
+
+
+
+
+
+
+
         </div>
         <div className={`${styles.horarioFuncionamento} ${styles.item3}`}>
           <h3 className={styles.funcionamentoTitle} >Horário de funcionamento</h3>

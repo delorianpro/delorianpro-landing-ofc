@@ -1,0 +1,699 @@
+.componentBannerSindico{
+  background-image: linear-gradient(to right, #0E0048,#110055, #031674, #1551b1, #2A7BFD, #5f98fa, #72a4fa, #deeafe, #E6F0F2);
+  margin-bottom: -5rem;
+  position: relative;
+}
+.contentBannerSindico{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  overflow: hidden;
+}
+.gridLeftBannerSindico{
+  margin-left: -2rem;
+}
+.titleBanner{
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  color:#ebad03;
+  text-align: center;
+}
+.subTitleBanner{
+  font-family: 'Roboto', monospace;
+  font-size: 2rem;
+  color: #E6F0F2;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.divTexteForm{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  align-items: center;
+}
+.textGratis{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  color: #E6F0F2;
+  font-weight: 300;
+  max-width: 70%;
+  position: relative;
+}
+.titleBlock{
+  width: fit-content;
+  justify-self: center;
+  text-align: center;
+}
+.textGratisContent::before{
+ content: "+";
+ font-weight: 500;
+ display: inline-block;
+ color: #0eee51;
+ position: absolute;
+ top: 50%;
+ left: 16.5rem;
+ transform: translate(-1850%, 0%) scale(1.4);
+}
+.gratisWord{
+  font-weight: 500;
+}
+.blockForm, .msgEnviado{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  max-width: 60%;
+  justify-self: center;
+  border-radius: 1.8rem;
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#000F3C, #000F3C) padding-box,
+    linear-gradient(90deg,#2654f8, #6B1BDB, #471bf8, #b204ec, #cf6502, #073af4) border-box;
+  padding: 2.5rem 2rem;
+  gap: 1.5rem;
+}
+.msgEnviado{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  text-align: center;
+  padding: 2.8rem 2rem;
+  gap: 0.5rem;
+}
+.blockInputs{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inputName, .inputWhats{
+  height: 2.5rem;
+  padding: 1.8rem 1.2rem 1.8rem 2.3rem;
+  border-radius: 0.5rem;
+  border: 2px solid #512cf39b;
+  background-color: rgb(238, 238, 238, 0.2);
+  color: #e8e8e8;
+  font-weight: 400;
+  font-size: 1.2rem;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+
+  &:hover{
+    cursor: pointer;
+    border: 2px solid #4c6aff;
+  }
+}
+.inputName:focus, .inputWhats:focus{
+  background-color: rgba(255, 255, 255, 0.801);
+  color: #101010;
+  outline: none;
+}
+.iconWhats {
+  width: 1.39rem;
+}
+.iconUser{
+  width: 1.5rem;
+  color: #ffffffa6;
+  transition: color 0.3s ease;
+}
+.divUserName, .divUserWhats{
+  position: relative;
+}
+.iconUser, .iconWhats{
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+.iconUserClick{
+  color: #6a8cfa;
+}
+.inputName::placeholder, .inputWhats::placeholder{
+  color: #a2a2a2e5;
+}
+.iconWhatsBtnForm{
+  width: 1.5rem;
+  height: auto;
+}
+.manutencaoIcone{
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  align-items: center;
+  color: white;
+  margin-top: 0.5rem;
+}
+.manutencaoPrevent{
+  color: white;
+  max-width: fit-content;
+  
+  &:hover{
+    cursor: pointer;
+    color: #e2b538;
+    font-weight: 500;
+    .textManuPreven{
+      border-bottom: 2px dashed #e2b538;
+    }
+    .arrowUpRight{
+      scale: 1.2;
+    }
+  }
+}
+.textManuPrevenDiv{
+  max-width: fit-content;
+    position: relative;
+}
+
+.textManuPreven{
+
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.39);
+}
+.arrowUpRight{
+  position: absolute;
+  bottom: 0.4rem;
+  right: -1.5rem;
+  height: 1.2rem;
+  width: fit-content;
+}
+.iconeChevromD{
+  height: 1.3rem;
+  display: inline-block;
+  width: auto;
+  background-color: #e2b538;
+  border-radius: 0.15rem;
+  color: #012284;
+  stroke-width: 0.22rem;
+}
+.btn{
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+  padding: 0.9rem;
+  border-radius: 2rem;
+  background-color: #007f26;
+  border: 1px solid #20f15f;
+  color: #EEEEEE;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-wrap: nowrap;
+  &:hover{
+    scale: 1.02;
+    background-color: #01cd3e;
+    border: 1px solid #4cff82;
+  }
+}
+.imageBanner{
+  z-index: 1000;
+  position: absolute;
+  height: auto;
+  width: 900px;
+  bottom: -85px;
+  right: 0;
+}
+.buttonFaleAgora{
+  width: fit-content;
+  padding: 0.8rem 2rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: var(--font-roboto);
+  background-color: #0311FE;
+  border-style: none;
+  color: white;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+  }
+}
+  .msgEnviado{
+    padding: 2.2rem 1.5rem;
+  }
+
+
+@media(max-width: 1650px){
+  .contentBannerSindico{
+    margin-left: 4rem;
+  }
+}
+@media(max-width: 1550px){
+  .contentBannerSindico{
+    margin-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .imageBanner{
+    width: 850px;
+    bottom: -77px;
+}
+}
+@media(max-width: 1470px){
+  .titleBanner{
+    font-size: 3.2rem;
+  }
+  .subTitleBanner{
+    font-size: 1.6rem;
+    padding-left: 2rem;
+  }
+  .textGratis{
+    font-size: 1.5rem;
+  }
+  .iconeChevromD{
+    height: 1.2rem;
+  }
+  .divTexteForm{
+    margin-left: -2rem;
+    margin-top: 2.8rem;
+  }
+  .titleBlock{
+    margin-left: -2rem;
+  }
+  .blockForm{
+    margin-left: -3rem;
+  }
+  .textGratisContent::before{
+    left: 14rem;
+
+  }
+  .imageBanner{
+    width: 765px;
+    bottom: -70px;
+}
+ .msgEnviado{
+    margin-right: 3.5rem;
+  }
+.arrowUpRight{
+  bottom: 0.3rem;
+  height: 1.1rem;
+}
+}
+@media(max-width: 1320px){
+   .msgEnviado{
+    padding: 2.2rem 1rem;
+  }
+
+}
+@media(max-width: 1300px){
+  .contentBannerSindico{
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+  }
+}
+@media(max-width: 1270px){
+  .contentBannerSindico{
+    margin-left: 0rem;
+  }
+  .divTexteForm{
+    margin-left: -1rem;
+    margin-top: 2.5rem;
+  }
+  .blockForm{
+    margin-left: -5rem;
+    padding: 2rem 1.8rem;
+  }
+   .imageBanner{
+    width: 740px;
+    bottom: -67px;
+}
+.nomeUsuarioMsg{
+  font-size: 1.2rem;
+}
+
+}
+@media(max-width: 1200px){
+  .titleBanner{
+    font-size: 2.7rem;
+  }
+  .subTitleBanner{
+    font-size: 1.2rem;
+  }
+  .textGratis{
+    font-size: 1.3rem;
+  }
+  .iconeChevromD{
+    height: 1.1rem;
+  }
+  .divTexteForm{
+    margin-left: -2rem;
+    margin-top: 1.7rem;
+  }
+  .titleBlock{
+    margin-left: -2rem;
+  }
+  .blockForm{
+    margin-left: -6rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem 1.4rem;
+  }
+  .textGratisContent::before{
+   left: 12rem;
+  }
+  .imageBanner{
+    width: 640px;
+    bottom: -59px;
+}
+  .contentBannerSindico{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .inputName, .inputWhats{
+    font-size: 1rem;
+    padding: 1.3rem 1.8rem;
+  }
+  .btn{
+    font-size: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+    gap: 0.2rem;
+  }
+   .msgEnviado{
+    padding: 1.5rem 1.8rem;
+  }
+  .nomeUsuarioMsg{
+    font-size: 1rem;
+  }
+  .buttonFaleAgora{
+    font-size: 0.8rem;
+    padding: 0.4rem 3rem;
+    height: 2.8rem;
+  }
+.arrowUpRight{
+  bottom: 0.15rem;
+  height: 1rem;
+}
+}
+@media(max-width: 1030px){
+  .divTexteForm{
+    margin-left: -2.4rem;
+  }
+   .msgEnviado{
+    padding: 1.5rem 1rem;
+    max-width: 65%;
+  }
+}
+@media(max-width: 1000px){
+  .msgEnviado{
+    padding: 1.5rem 0.7rem;
+    max-width: 68%;
+  }
+  .imageBanner{
+    width: 500px;
+    bottom: -45px;
+}
+.contentBannerSindico{
+  margin-bottom: 5rem;
+}
+.gridLeftBannerSindico{
+  margin-left: 1.2rem;
+}
+.blockForm{
+  min-width: 68%;
+}
+.textGratis{
+  font-size: 1.2rem;
+  align-self: flex-start;
+  padding-left: 3rem;
+  text-wrap: nowrap;
+}
+.subTitleBanner{
+  padding-left: 0.5rem;
+}
+.textGratisContent::before{
+   left: 14rem;
+  }
+}
+@media(max-width: 850px){
+  .inputName, .inputWhats{
+    padding: 1.5rem;
+    padding-left: 2rem;
+  }
+  .componentBannerSindico{
+    background-image: linear-gradient(to bottom, #0E0048,#110055, #031674, #1551b1, #2A7BFD, #5f98fa, #72a4fa, #acc8f8);
+    min-height: 55rem;
+    margin-bottom: -1.8rem;
+  }
+  .contentBannerSindico{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+    margin-bottom: 0rem;
+    z-index: 1;
+    padding-bottom: 0;
+  }
+  .textGratis{
+    font-size: 1.8rem;
+    color: #E6F0F2;
+    padding: 0;
+    align-self: center;
+  }
+  .textGratisContent{
+    width: fit-content;
+    justify-self: center;
+  }
+  .divTexteForm{
+    position: absolute;
+    margin: 0;
+    background: #000000e4;
+    z-index: 9999;
+    bottom: 0;
+    padding: 2rem 2rem;
+    width: 100%;
+    justify-self: center;
+    border-radius: 4rem 4rem 0 0;
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.9) 15%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.2) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .imageBanner{
+    width: 100%;
+    top: -2.2rem;
+  }
+  .titleBanner{
+  font-size: 2.5rem;
+}
+.subTitleBanner{  
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  max-width: 95%;
+  min-width: 10rem;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.titleBlock{
+  text-align: center;
+}
+.gridLeftBannerSindico{
+  margin-left: 0;
+  z-index: 9999;
+}
+.textGratisContent::before{
+  left: 16.5rem;
+}
+.blockForm, .msgEnviado{
+  max-width: 90%;
+  padding: 3.5rem 2rem;
+  gap: 1.5rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.arrowUpRight{
+  bottom: 0.4rem;
+  height: 1.1rem;
+}
+}
+@media(max-width: 740px){
+  .subTitleBanner{
+    padding: 1rem 1.1rem;
+  }
+  .textGratisContent::before{
+    left: 15rem;
+  }
+}
+@media(max-width: 620px){
+  .componentBannerSindico{
+    min-height: 52rem;
+    margin-bottom: -1.8rem;
+  }
+  .divTexteForm{
+    padding: 1.8rem 1.5rem;
+  }
+  .titleBanner{
+    font-size: 2rem;
+  }
+  .subTitleBanner{
+    font-size: 1.2rem;
+    max-width: 99%;
+    padding: 1rem 1.8rem;
+  }
+  .textGratis{
+    font-size: 1.2rem;
+  }
+  .textGratisContent::before{
+    left: 12.5rem;
+  }
+  .iconeChevromD{
+    height: 0.9rem;
+  }
+  .blockForm{
+    padding: 3rem 1.8rem;
+  }
+  .msgEnviado{
+    padding: 2rem 1rem;
+  }
+  .arrowUpRight{
+    bottom: 0.3rem;
+    height: 0.8rem;
+    right: -1rem;
+}
+}
+@media(max-width: 550px){
+  .componentBannerSindico{
+    min-height: 47rem;
+    margin-bottom: -0.5rem;
+  }
+  .textGratisContent::before{
+    left: 10.8rem;
+  }
+  .divTexteForm{
+    bottom: 0rem;
+  }
+ .blockForm{
+  width: 100%;
+ }
+ .subTitleBanner{
+  padding: 0.5rem 0.5rem;
+ }
+}
+@media(max-width: 530px){
+  .imageBanner{
+    top: -1rem;
+  }
+  }
+@media(max-width: 470px){
+  .contentBannerSindico{
+    padding-top: 1rem;
+  }
+  .textGratisContent::before{
+    left: 10rem;
+  }
+  .divTexteForm{
+    padding: 1.8rem 0.2rem;
+    bottom: 0;
+  }
+  .subTitleBanner{
+    padding: 0.5rem 0.5rem;
+    width: 99%;
+  }
+  .blockForm{
+    padding: 1.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+  .componentBannerSindico{
+    min-height: 42rem;
+  }
+} 
+@media(max-width: 420px){
+  .imageBanner{
+    top: 1.2rem;
+  }
+  .msgEnviado{
+    margin-top: 1.5rem;
+  }
+}
+@media(max-width:400px){
+  .textGratisContent::before{
+    left: 9.2rem;
+  }
+}
+@media(max-width: 360px){
+  .imageBanner{
+    top: 1.3rem;
+  }
+  .titleBanner{
+    font-size: 1.6rem;
+  }
+  .subTitleBanner{
+    font-size: 1rem;
+  }
+  .textGratisContent{
+    font-size: 1rem;
+  }
+  .textGratisContent::before{
+    left: 8rem;
+  }
+  .iconeChevromD{
+    height: 0.78rem;
+  }
+    .componentBannerSindico{
+    min-height: 38rem;
+  }
+  .btn{
+    font-size: 0.65rem;
+  }
+  .iconWhatsBtnForm{
+    width: 1rem;
+  }
+  .msgEnviado{
+    padding: 1.2rem 0.8rem;
+    gap: 0.8rem;
+  }
+  .nomeUsuarioMsg{
+    font-size: 0.8rem;
+  }
+  .buttonFaleAgora{
+    height: 2rem;
+    font-size: 0.6rem;
+  }
+    .arrowUpRight{
+    bottom: 0.2rem;
+    height: 0.7rem;
+}
+}
+@media(max-width: 320px){
+  .textGratisContent{
+    font-size: 0.9rem;
+  }
+  .textGratisContent::before{
+    left: 7rem;
+  }
+}
+@media(max-width: 300px){
+  .componentBannerSindico{
+    min-height: 32.5rem;
+    margin-bottom: 0rem;
+  }
+  .msgEnviado{
+    margin-top: 1rem;
+  }
+}
+@media(max-width: 280px){
+  .imageBanner{
+    top: 1rem;
+  }
+  .titleBanner{
+    font-size: 1.2rem;
+  }
+  .subTitleBanner{
+    font-size: 0.85rem;
+  }
+ 
+  }

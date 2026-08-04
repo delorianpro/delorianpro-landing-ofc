@@ -99,6 +99,10 @@
   line-height: 118%;
   padding-bottom: 2rem;
 }
+.heroColumnRightTitleCondominio{
+  /* background-color: red; */
+  padding-bottom: 0.5rem;
+}
 .heroColumnRightBlocks{
   display: flex;
   padding-bottom: 5rem;
@@ -364,3 +368,74 @@
   margin-left: -3.5rem;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.componentBtnEiSindico{
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+}
+  .btnEiSindico{
+    font-size: 0.82rem;
+    display: flex;
+    gap: 0.438rem;
+    width: fit-content;
+    background-color: #0311FE;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.22em 0.8rem 0.22em 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.6rem;
+
+
+  
+  &:hover{
+    background-color: #010335;
+    }
+  }
+  .iconeHand, .textEiSindico{
+    width: auto;
+  }
+
+  @keyframes moverDireita {
+  0% {
+    transform: translateX(0); /* Posição inicial */
+  }
+  50% {
+    transform: translateX(6px); /* Move 6px para a direita */
+  }
+  100% {
+    transform: translateX(0); /* Volta para a posição inicial */
+  }
+}
+
+  .iconeHand {
+    font-size: 1.2rem;
+    display: inline-block;
+    animation: moverDireita 1.4s ease-in-out infinite;
+  }

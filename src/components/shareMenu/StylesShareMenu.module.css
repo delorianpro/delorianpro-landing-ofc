@@ -1,0 +1,27 @@
+.shareMenuContainer{
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  margin: 0 auto;
+}
+.shareMenuContent{
+  display: flex;
+  margin: 0 auto;
+  background-color: rgb(40, 34, 34);
+  padding: 2rem 3rem;
+  gap: 1.5rem;
+}
+.iconLink :global(svg) {
+  font-size: 30px; /* controla o tamanho */
+  color: #333;     /* controla a cor */
+  transition: transform 0.2s, color 0.2s;
+}
+.iconLink :global(svg):hover {
+  color: #25D366; /* muda a cor ao passar o mouse */
+  transform: scale(1.2);
+}
+.shareMenuBtn{
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+}
