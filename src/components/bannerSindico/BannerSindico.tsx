@@ -105,7 +105,7 @@ const handleOpenPreventiva = () => {
 
     const phoneNumber = '+5541985011909'; 
     const handleClickTalkWithUs = () => {
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=Olá!%20Tudo%20bem?%20Gostaria%20de%20mais%20informações.`;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=Olá,%20equipe%20Delorian!👋%20Acabei%20de%20solicitar%20o%20Manual%20de%20Sobrevivência%20do%20Síndico%20pelo%20site%20e%20vim%20continuar%20nosso%20contato%20pelo%20WhatsApp.`;
     window.open(whatsappLink, '_blank'); 
   }
 
