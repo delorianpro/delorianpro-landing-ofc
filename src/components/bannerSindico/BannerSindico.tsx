@@ -112,8 +112,8 @@ const handleOpenPreventiva = () => {
 
 
   return(
-    <div className={styles.componentBannerSindico} id="bannerSindico-sessao">
-      <div className={styles.contentBannerSindico}>
+    <div className={styles.componentBannerSindico} id="banner-sindico">
+      <div className={styles.contentBannerSindico} id="banner-sindico-content">
         <div className={styles.gridLeftBannerSindico}>
           <h2 className={styles.titleBanner}>Ei, Síndico!</h2>
           <p className={styles.subTitleBanner}>Veja dicas práticas de manutenção preventiva para manter seu condomínio sempre funcionando.</p>

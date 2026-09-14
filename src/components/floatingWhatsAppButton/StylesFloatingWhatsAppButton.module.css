@@ -6,7 +6,7 @@
   position: fixed;
   padding: 0.25rem;
   bottom: 0.125rem; 
-  right: 1rem;
+  right: 0rem;
   width: 5.5rem; 
   height: 5.5rem;
   cursor: pointer;
@@ -39,7 +39,7 @@
   @media (max-width: 600px) {
     .whatsappIconFixed {
       bottom: 1vw; 
-      right: 0.5vw;
+      right: -0.7rem;
       width: 4rem; 
       height: 4rem;
       position: fixed;

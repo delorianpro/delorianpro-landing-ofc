@@ -16,6 +16,7 @@ import { MarcasParceiras } from "@/components/marcasParceiras/MarcasParceiras";
 import { PlansDelorian } from "@/components/plans/PlansDelorian";
 import { ServicosDelorian } from "@/components/servicosDelorian/ServicosDelorian";
 import { SobreNos } from "@/components/sobreNos/SobreNos";
+import { ScrollToTopButton } from "@/components/scrollToTopButton/ScrollToTopButton";
 
 import { useState } from "react"; //novo
 
@@ -42,6 +43,7 @@ export default function Home() {
       <SobreNos />
       <InfoSection />
       <Footer />
+      <ScrollToTopButton />
       <FloatingWhatsAppButton />
     </div>
   );

@@ -7,7 +7,7 @@ import { ModalGlobal } from "@/components/modalGlobal/ModalGlobal";
 
 export const metadata: Metadata = {
   title: "Delorian | Automação e Manutenção de portões eletrônicos",
-  description: "Automação e manutenção de portões eletrônicos. A Delorian oferece instalção, automação e manutenção de portões eletrônicos, instalação de cremalheiras, conserto de motores. Serviços especializados para segurança e conveniência, vamos até você sem cobrar nada e orçamento também gratuito.",
+  description: "A Delorian oferece instalção, automação e manutenção de portões eletrônicos, instalação de cremalheiras, conserto de motores e mais. Serviços especializados para segurança e vamos até você sem cobrar nada e orçamento gratuito.",
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
