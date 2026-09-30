@@ -108,6 +108,15 @@
   padding-bottom: 5rem;
   justify-content: space-between;
 }
+.heroColumnRightBlocksCompany{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.heroColumnRightBlocksCompany .heroColumnRightListLink{
+  justify-content: flex-start;
+  text-align: left;
+}
 .heroColumnRightBlocksLast{
   padding-bottom: 0;
 }
@@ -125,17 +134,16 @@
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   background-color: transparent;
   color: inherit;
   cursor: pointer;
   text-transform: inherit;
+  transition: color 0.2s ease, transform 0.2s ease;
   &:hover{
     color: #0311fe;
-    scale: 1.2;
-    .iconsLinks, .iconsLinksGrid2, .iconsLinksGrid3{
-      padding: 0rem;
-    }
+    transform: scale(1.2);
   }
 }
 .iconsLinks, .iconsLinksGrid2, .iconsLinksGrid3{

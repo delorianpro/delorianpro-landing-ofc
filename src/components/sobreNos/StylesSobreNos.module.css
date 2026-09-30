@@ -35,10 +35,10 @@
   margin: 0 auto;
 }
 .titleQuemSomosBlock, .titleNossaMeValoresBlock, .subTitleQuemSomos, .questionValores, .titleComponentText{
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 .iconAndParagraphNossaMeValoBlock, .paragraNossaMeValores, .spanCta, .paragraQuemSomos, .paragraQuemSomosItemList, .pagraIntroMeValores,.pagraIntroQuemSomos, .liEscolhaDelorian{
-  font-family: 'Roboto', monospace;
+  font-family: var(--font-roboto), sans-serif;
 }
 .titleQuemSomosBlock, .titleNossaMeValoresBlock {
   display: grid;

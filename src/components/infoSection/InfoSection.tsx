@@ -37,6 +37,7 @@ export function InfoSection() {
 
           <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Instalação de motor em portões"))!)} className={`${styles.delorianSolu} ${styles.delorianSoluFirstChild}`}>Instalação de motor em portões</Link>
           <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Controle de acesso"))!)} className={styles.delorianSolu}>Controle de acesso</Link>
+          <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Câmeras"))!)} className={styles.delorianSolu}>Câmeras</Link>
           <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Alarmes"))!)} className={styles.delorianSolu}>Alarmes</Link>
           <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("TX-Car"))!)} className={styles.delorianSolu}>TX-Car</Link>
           <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Motor indo só para um lado"))!)} className={styles.delorianSolu}>Motor indo só para um lado</Link>

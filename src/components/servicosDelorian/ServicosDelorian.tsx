@@ -45,6 +45,18 @@ export const solucoes: Solucao[] = [
     classname:"motorImage",
     iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
   },
+   {
+    id: 15,
+    title: "Câmeras",
+    btnMais: "Ler mais",
+    description: "Suporte personalizado para suas necessidades.",
+    descriptionVideo:"🔒📹Sua segurança merece estar sempre sob controle! ⚡ A Delorian instala câmeras de segurança para empresas, condomínios e residências.🛠️ Sistemas modernos, com imagens em alta definição, visão noturna, acesso remoto pelo celular e monitoramento em tempo real. Equipamentos de qualidade, instalação profissional e suporte especializado.🚨 Monitore seu patrimônio de onde estiver e tenha mais tranquilidade no dia a dia. Agende sua visita técnica gratuita e encontre a melhor solução em câmeras de segurança para o seu espaço com a Delorian!⚡.",
+    gifHover: [{ src: "/assets/gifCameras.gif", alt: "Símbolo de mais, indicando que a Delorian realiza outros serviços além dos citados.", width: 120, height: 120 }],
+    videoModal: "https://www.youtube.com/embed/Y7BetWfZPQU?si=irCrSqyRCFty6efd&rel=0&autoplay=1",
+    imagesThumbNail: [{ src: "/assets/thumbCamera.webp", alt: "Imagem de um motor de portão eletrônico", width: 300, height: 450 }],
+    classname:"motorImage",
+    iconLogoDelorian:[{ src: "/assets/iconD.svg", alt:"Logo Delorian", width: 104, height: 104}]
+  },
   
     {
     id: 3,

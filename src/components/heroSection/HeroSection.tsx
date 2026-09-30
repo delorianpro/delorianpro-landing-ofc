@@ -32,7 +32,7 @@ const { abrirModal } = useModal();
     <div className={styles.heroContent}>
       <div className={styles.heroColumnLeft}>
       <div className={styles.heroColumnBlockTexts}>
-        <p className={styles.heroHeadline}><span className={styles.spanHeadline}>A Delorian te ajuda com:</span> <br /> <b className={styles.textBold}>Alarmes, Interfones,<br /> Portas sociais, <br />Travas antiarrombamento,<br /> Sensores, Cancelas, <br /> Portões automáticos <br /> e muito mais...</b></p>
+        <p className={styles.heroHeadline}><span className={styles.spanHeadline}>A Delorian te ajuda com:</span> <br /> <b className={styles.textBold}>Alarmes, Câmeras, Interfones,<br /> Portas sociais, <br />Travas antiarrombamento,<br /> Sensores, Cancelas, <br /> Portões automáticos <br /> e muito mais...</b></p>
       </div>
       <div className={styles.divSpanBtn}>
       <span className={styles.heroSpan}>A gente cuida de tudo para você.</span>
@@ -51,9 +51,10 @@ const { abrirModal } = useModal();
     <div className={styles.heroColumnRight}>
       <div>
         <h3 className={styles.heroColumnRightTitles}>CUIDAMOS DA SUA EMPRESA</h3>
-        <div className={styles.heroColumnRightBlocks}>
-          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Controle de acesso"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/cadeBlueIcon.webp" alt={"Ícone de um cadeado na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Controle de <br /> acesso</Link></div>
-          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Porta social"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/portSoBlueIcon.webp" alt={"Ícone de uma porta na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Porta <br />social</Link></div>
+        <div className={`${styles.heroColumnRightBlocks} ${styles.heroColumnRightBlocksCompany}`}>
+          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Câmeras"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/cameraIcon.webp" alt={"Ícone de um cadeado na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Câmeras</Link></div>
+          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Controle de acesso"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/cadeBlueIcon.webp" alt={"Ícone de um cadeado na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Controle de acesso</Link></div>
+          <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Porta social"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/portSoBlueIcon.webp" alt={"Ícone de uma porta na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Porta social</Link></div>
           <div className={styles.heroColumnRightListItens}> <Link href={"#"} onClick={() => abrirModal(solucoes.find(solucoes=> solucoes.title.includes("Alarmes"))!)} className={styles.heroColumnRightListLink}><Image src="/assets/alarmIcon.webp" alt={"Ícone de uma sirene na cor branca"} width={100} height={100} priority={true} className={styles.iconsLinks}/>Alarmes</Link></div>
         </div>
       </div>

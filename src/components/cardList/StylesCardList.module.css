@@ -17,7 +17,7 @@
   line-height: auto;
   letter-spacing: 5%;
   color: #010549;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 .raioAzul{
   height: 5rem;
@@ -130,7 +130,7 @@ animation-delay: calc(30s / 7 * (8 - 7) * -1);
 .titleContainer{
   gap: 0.5rem;
   margin-bottom: 0;
-  padding-top: 0.063rem;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
 .title{

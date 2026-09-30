@@ -10,7 +10,7 @@
   width: 5.5rem; 
   height: 5.5rem;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 9999;
   border: solid 0.125rem transparent;
   margin: 1rem;
   animation: blink 6s infinite;

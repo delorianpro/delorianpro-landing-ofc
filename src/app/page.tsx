@@ -11,6 +11,7 @@ import { FloatingWhatsAppButton } from "@/components/floatingWhatsAppButton/Floa
 import { Footer } from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { HeroSection } from "@/components/heroSection/HeroSection";
+import { GoogleReviewsSection } from "@/components/googleReviews/GoogleReviewsSection";
 import { InfoSection } from "@/components/infoSection/InfoSection";
 import { MarcasParceiras } from "@/components/marcasParceiras/MarcasParceiras";
 import { PlansDelorian } from "@/components/plans/PlansDelorian";
@@ -34,9 +35,11 @@ export default function Home() {
       <HeroSection />
       <ServicosDelorian />
       <BannerSindico setOpenIndex={setOpenIndex}/>
+      {/* <RecentServices /> */}
       <PlansDelorian />
       <ChamaDelorian />
       <CuritibaRegiao />
+      <GoogleReviewsSection />
       <CardList />
       <MarcasParceiras />
       <Faq openIndex={openIndex} setOpenIndex={setOpenIndex}/>

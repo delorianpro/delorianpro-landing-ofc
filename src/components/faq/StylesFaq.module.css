@@ -17,7 +17,7 @@
   line-height: auto;
   letter-spacing: 5%;
   color: #010549;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 .raioAzul{
   height: 5rem;
@@ -55,7 +55,7 @@
   gap: 1rem;
 }
 .question{
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
@@ -65,7 +65,7 @@
 
 }
 .answer, .cta{
-  font-family: 'Roboto', monospace;
+  font-family: var(--font-roboto), sans-serif;
   display: flex;
   justify-content: center;
   font-size: 1.2rem;

@@ -1,6 +1,5 @@
 .componentBannerSindico{
   background-image: linear-gradient(to right, #0E0048,#110055, #031674, #1551b1, #2A7BFD, #5f98fa, #72a4fa, #deeafe, #E6F0F2);
-  margin-bottom: -5rem;
   position: relative;
 }
 .contentBannerSindico{
@@ -412,9 +411,9 @@
     width: 500px;
     bottom: -45px;
 }
-.contentBannerSindico{
+/* .contentBannerSindico{
   margin-bottom: 5rem;
-}
+} */
 .gridLeftBannerSindico{
   margin-left: 1.2rem;
 }
@@ -442,7 +441,7 @@
   .componentBannerSindico{
     background-image: linear-gradient(to bottom, #0E0048,#110055, #031674, #1551b1, #2A7BFD, #5f98fa, #72a4fa, #acc8f8);
     min-height: 55rem;
-    margin-bottom: -1.8rem;
+    margin-bottom: 0rem;
   }
   .contentBannerSindico{
     display: grid;
@@ -531,7 +530,6 @@
 @media(max-width: 620px){
   .componentBannerSindico{
     min-height: 52rem;
-    margin-bottom: -1.8rem;
   }
   .divTexteForm{
     padding: 1.8rem 1.5rem;
@@ -568,7 +566,6 @@
 @media(max-width: 550px){
   .componentBannerSindico{
     min-height: 47rem;
-    margin-bottom: -0.5rem;
   }
   .textGratisContent::before{
     left: 10.8rem;

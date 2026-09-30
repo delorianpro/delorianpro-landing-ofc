@@ -2,6 +2,9 @@
   max-width: 1364px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: absolute;
+  justify-self: center;
+  z-index: 9999;
  }
  .textImageContainer{
   display: flex;
@@ -10,7 +13,7 @@
   border-radius: 3.125rem;
   margin-bottom: 4rem;
   z-index: 999;
-  margin-top: -16rem;
+  margin-top: -14rem;
   padding: 2rem 0;
  }
  .blocoTexto{
@@ -21,14 +24,14 @@
   justify-content: center;
  }
  .titulo{
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.438rem;
   color: white;
  }
  .informacao{
-  font-family: 'Roboto', monospace;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.875rem;
