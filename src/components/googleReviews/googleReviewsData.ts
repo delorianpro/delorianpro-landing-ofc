@@ -14,7 +14,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     initials: "RS",
     comment:
       "Excelente empresa e profissional. Tudo feito com critério e excelência, pontualidade e comprometimento. Recomendo fortemente !",
-    date: "9 meses atrás",
+    date: "2025-12-15",
     rating: 5,
   },
   {
@@ -22,7 +22,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     initials: "SB",
     comment:
       "São atenciosos e ótimos no que fazem. Contratei o serviço para o condomínio onde sou sindico e não me arrependi. Indico.",
-    date: "9 meses atrás",
+    date: "2025-11-25",
     rating: 5,
   },
     {
@@ -30,7 +30,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     initials: "LT",
     comment:
       "Atendimento rápido, prático e objetivo. Apresentou alternativas para a necessidade que tínhamos, além de efetuar o serviço rapidamente. Itens instalados - automação do portão com acionamento via wifi e interfone. Parabéns.",
-    date: "14/07/2025",
+    date: "15-07-2025",
     rating: 5,
   },
 ];

@@ -2,8 +2,15 @@
 
 import Image from "next/image";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { KeyboardEvent, UIEvent, useRef, useState } from "react";
+import {
+  KeyboardEvent,
+  UIEvent,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import { GOOGLE_REVIEWS, GoogleReview } from "./googleReviewsData";
+import { formatRelativeDate } from "./formatRelativeDate";
 import styles from "./StylesGoogleReviewsSection.module.css";
 
 // TODO: Adicione aqui a URL pública com todas as avaliações da Delorian.
@@ -13,6 +20,7 @@ const GOOGLE_WRITE_REVIEW_URL = "https://g.page/r/CVr8O63AS4DaEAI/review";
 
 const GOOGLE_RATING = "5,0";
 const GOOGLE_REVIEW_COUNT = "+30 avaliações";
+const emptySubscribe = () => () => {};
 
 function GoogleLogo({ className }: { className?: string }) {
   return (
@@ -39,6 +47,12 @@ function Stars({ rating }: { rating: number }) {
 }
 
 function ReviewCard({ review }: { review: GoogleReview }) {
+  const hasHydrated = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+
   return (
     <article className={styles.reviewCard}>
       <div className={styles.reviewerHeader}>
@@ -70,7 +84,7 @@ function ReviewCard({ review }: { review: GoogleReview }) {
           <GoogleLogo className={styles.googleLogoSmall} />
           <span>Avaliação no Google</span>
         </span>
-        <time>{review.date}</time>
+        <time>{hasHydrated ? formatRelativeDate(review.date) : null}</time>
       </footer>
     </article>
   );
