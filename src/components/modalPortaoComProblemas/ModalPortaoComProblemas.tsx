@@ -3,12 +3,29 @@
 import Image from 'next/image';
 import styles from './StylesModalPortaoComProblemas.module.css'
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, X } from 'lucide-react';
+import { createPortal } from 'react-dom';
+import { Check, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Ellipsis, Link2, Mail, Share2, X } from 'lucide-react';
+import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
 
 type SwipePhase = 'idle' | 'dragging' | 'resetting' | 'exiting' | 'entering';
+type ShareSheetMotionPhase = 'idle' | 'dragging' | 'resetting' | 'closing';
 
 const SWIPE_THRESHOLD = 60;
 const SWIPE_TRANSITION_MS = 210;
+const SHARE_SHEET_CLOSE_THRESHOLD = 88;
+const SHARE_SHEET_TRANSITION_MS = 240;
+const SHARED_SERVICE_QUERY_PARAM = 'servico';
+
+const summarizeDescription = (description: string, maxLength = 180) => {
+  const normalizedDescription = description.replace(/\s+/g, ' ').trim();
+
+  if (normalizedDescription.length <= maxLength) return normalizedDescription;
+
+  const shortenedDescription = normalizedDescription.slice(0, maxLength - 3);
+  const lastSpaceIndex = shortenedDescription.lastIndexOf(' ');
+
+  return `${shortenedDescription.slice(0, lastSpaceIndex > 0 ? lastSpaceIndex : undefined)}...`;
+};
 
 interface Solucao {
   id: number;
@@ -36,26 +53,228 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
     const [swipeOffset, setSwipeOffset] = useState(0);
     const [swipePhase, setSwipePhase] = useState<SwipePhase>('idle');
     const [swipeDirection, setSwipeDirection] = useState<1 | -1>(1);
+    const [isShareSheetOpen, setIsShareSheetOpen] = useState(false);
+    const [shareUrl, setShareUrl] = useState('');
+    const [copyFeedback, setCopyFeedback] = useState('');
+    const [shareSheetOffset, setShareSheetOffset] = useState(0);
+    const [shareSheetMotionPhase, setShareSheetMotionPhase] = useState<ShareSheetMotionPhase>('idle');
     const touchStart = useRef<{ x: number; y: number } | null>(null);
     const touchAxis = useRef<'pending' | 'horizontal' | 'vertical'>('pending');
     const suppressVideoClick = useRef(false);
     const videoRef = useRef<HTMLIFrameElement | null>(null);
+    const shareButtonRef = useRef<HTMLButtonElement | null>(null);
+    const shareSheetRef = useRef<HTMLElement | null>(null);
+    const shareSheetPointerId = useRef<number | null>(null);
+    const shareSheetDragStartY = useRef<number | null>(null);
+    const shareSheetOffsetRef = useRef(0);
+    const shouldResumeVideoAfterShare = useRef(false);
     const isNavigating = useRef(false);
     const exitTimer = useRef<number | null>(null);
     const enterTimer = useRef<number | null>(null);
     const resetTimer = useRef<number | null>(null);
+    const copyFeedbackTimer = useRef<number | null>(null);
+    const shareSheetMotionTimer = useRef<number | null>(null);
     const activeSolucao = solucoes[activeIndex] ?? solucao;
     const activeVideoSource = activeSolucao.videoModal
       ? `${activeSolucao.videoModal}${activeSolucao.videoModal.includes('?') ? '&' : '?'}enablejsapi=1&playsinline=1`
       : undefined;
     const hasPrevious = activeIndex > 0;
     const hasNext = activeIndex < solucoes.length - 1;
+    const shareTitle = activeSolucao.title;
+    const shareDescription = summarizeDescription(activeSolucao.descriptionVideo);
+    const shareText = `${shareTitle}\n${shareDescription}`;
     const phoneNumber = '+5541985011909'; 
     const handleClickTalkWithUs = () => {
     const message = "Olá! Vi informações sobre " + activeSolucao.title + " no site e gostaria de saber mais detalhes."
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, '_blank'); 
   }
+
+  const getShareUrl = useCallback(() => {
+    const url = new URL(window.location.href);
+    url.searchParams.set(SHARED_SERVICE_QUERY_PARAM, String(activeSolucao.id));
+    url.hash = '';
+    return url.toString();
+  }, [activeSolucao.id]);
+
+  const sendVideoCommand = useCallback((command: 'pauseVideo' | 'playVideo') => {
+    videoRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: 'command', func: command, args: [] }),
+      'https://www.youtube.com'
+    );
+  }, []);
+
+  const resetShareSheetMotion = useCallback(() => {
+    if (shareSheetMotionTimer.current) window.clearTimeout(shareSheetMotionTimer.current);
+    shareSheetPointerId.current = null;
+    shareSheetDragStartY.current = null;
+    shareSheetOffsetRef.current = 0;
+    setShareSheetOffset(0);
+    setShareSheetMotionPhase('idle');
+  }, []);
+
+  const closeShareSheet = useCallback(() => {
+    const shouldResumeVideo = shouldResumeVideoAfterShare.current;
+    shouldResumeVideoAfterShare.current = false;
+    resetShareSheetMotion();
+    if (copyFeedbackTimer.current) window.clearTimeout(copyFeedbackTimer.current);
+    copyFeedbackTimer.current = null;
+    setIsShareSheetOpen(false);
+    setCopyFeedback('');
+
+    if (shouldResumeVideo) {
+      sendVideoCommand('playVideo');
+      setIsVideoPlaying(true);
+    }
+
+    window.requestAnimationFrame(() => shareButtonRef.current?.focus());
+  }, [resetShareSheetMotion, sendVideoCommand]);
+
+  const openShareSheet = () => {
+    if (!window.matchMedia('(max-width: 900px)').matches || isShareSheetOpen) return;
+
+    shouldResumeVideoAfterShare.current = isVideoPlaying;
+    if (isVideoPlaying) {
+      sendVideoCommand('pauseVideo');
+      setIsVideoPlaying(false);
+    }
+
+    setShareUrl(getShareUrl());
+    setCopyFeedback('');
+    resetShareSheetMotion();
+    setIsShareSheetOpen(true);
+  };
+
+  const showShareFeedback = (message: string) => {
+    setCopyFeedback(message);
+    if (copyFeedbackTimer.current) window.clearTimeout(copyFeedbackTimer.current);
+    copyFeedbackTimer.current = window.setTimeout(() => {
+      setCopyFeedback('');
+      copyFeedbackTimer.current = null;
+    }, 3200);
+  };
+
+  const handleCopyLink = async () => {
+    const url = shareUrl || getShareUrl();
+    const copyWithTextArea = () => {
+      const textArea = document.createElement('textarea');
+      textArea.value = url;
+      textArea.readOnly = true;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      const copied = document.execCommand('copy');
+      textArea.remove();
+
+      if (!copied) throw new Error('Copy command failed');
+    };
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(url);
+        } catch {
+          copyWithTextArea();
+        }
+      } else {
+        copyWithTextArea();
+      }
+
+      showShareFeedback('Link copiado!');
+    } catch {
+      showShareFeedback('Não foi possível copiar o link.');
+    }
+  };
+
+  const handleNativeShare = () => {
+    const url = shareUrl || getShareUrl();
+
+    if (typeof navigator.share !== 'function') {
+      showShareFeedback('Compartilhamento nativo não suportado neste navegador.');
+      return;
+    }
+
+    navigator.share({
+      title: shareTitle,
+      text: shareDescription,
+      url,
+    })
+      .then(closeShareSheet)
+      .catch((error: unknown) => {
+        if (error instanceof Error && error.name === 'AbortError') {
+          closeShareSheet();
+          return;
+        }
+        showShareFeedback('Não foi possível abrir o compartilhamento.');
+      });
+  };
+
+  const handleShareSheetPointerDown = (event: React.PointerEvent<HTMLElement>) => {
+    if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
+
+    if (shareSheetMotionTimer.current) window.clearTimeout(shareSheetMotionTimer.current);
+    shareSheetPointerId.current = event.pointerId;
+    shareSheetDragStartY.current = event.clientY;
+    shareSheetOffsetRef.current = 0;
+    setShareSheetOffset(0);
+    setShareSheetMotionPhase('dragging');
+    event.currentTarget.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  };
+
+  const handleShareSheetPointerMove = (event: React.PointerEvent<HTMLElement>) => {
+    if (shareSheetPointerId.current !== event.pointerId || shareSheetDragStartY.current === null) return;
+
+    const nextOffset = Math.max(0, event.clientY - shareSheetDragStartY.current);
+    shareSheetOffsetRef.current = nextOffset;
+    setShareSheetOffset(nextOffset);
+    event.preventDefault();
+  };
+
+  const releaseShareSheetPointer = (event: React.PointerEvent<HTMLElement>) => {
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    shareSheetPointerId.current = null;
+    shareSheetDragStartY.current = null;
+  };
+
+  const returnShareSheetToStart = () => {
+    shareSheetOffsetRef.current = 0;
+    setShareSheetMotionPhase('resetting');
+    setShareSheetOffset(0);
+
+    if (shareSheetMotionTimer.current) window.clearTimeout(shareSheetMotionTimer.current);
+    shareSheetMotionTimer.current = window.setTimeout(() => {
+      setShareSheetMotionPhase('idle');
+    }, SHARE_SHEET_TRANSITION_MS);
+  };
+
+  const handleShareSheetPointerEnd = (event: React.PointerEvent<HTMLElement>) => {
+    if (shareSheetPointerId.current !== event.pointerId) return;
+
+    const shouldClose = shareSheetOffsetRef.current >= SHARE_SHEET_CLOSE_THRESHOLD;
+    releaseShareSheetPointer(event);
+
+    if (!shouldClose) {
+      returnShareSheetToStart();
+      return;
+    }
+
+    const sheetHeight = shareSheetRef.current?.offsetHeight ?? window.innerHeight * 0.4;
+    setShareSheetMotionPhase('closing');
+    setShareSheetOffset(sheetHeight + 24);
+
+    if (shareSheetMotionTimer.current) window.clearTimeout(shareSheetMotionTimer.current);
+    shareSheetMotionTimer.current = window.setTimeout(closeShareSheet, SHARE_SHEET_TRANSITION_MS);
+  };
+
+  const handleShareSheetPointerCancel = (event: React.PointerEvent<HTMLElement>) => {
+    if (shareSheetPointerId.current !== event.pointerId) return;
+    releaseShareSheetPointer(event);
+    returnShareSheetToStart();
+  };
 
   const navigateTo = useCallback((nextIndex: number) => {
     if (nextIndex < 0 || nextIndex >= solucoes.length || isNavigating.current) return;
@@ -101,19 +320,19 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
     }
 
     const command = isVideoPlaying ? 'pauseVideo' : 'playVideo';
-    videoRef.current?.contentWindow?.postMessage(
-      JSON.stringify({ event: 'command', func: command, args: [] }),
-      'https://www.youtube.com'
-    );
+    sendVideoCommand(command);
     setIsVideoPlaying((playing) => !playing);
   };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onClose();
+        if (isShareSheetOpen) closeShareSheet();
+        else onClose();
         return;
       }
+
+      if (isShareSheetOpen) return;
 
       if (event.key === 'ArrowLeft' && hasPrevious) {
         event.preventDefault();
@@ -128,7 +347,20 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [activeIndex, hasNext, hasPrevious, navigateTo, onClose]);
+  }, [activeIndex, closeShareSheet, hasNext, hasPrevious, isShareSheetOpen, navigateTo, onClose]);
+
+  useEffect(() => {
+    if (!isShareSheetOpen) return;
+
+    shareSheetRef.current?.focus();
+    const mobileMediaQuery = window.matchMedia('(max-width: 900px)');
+    const closeWhenLeavingMobile = (event: MediaQueryListEvent) => {
+      if (!event.matches) closeShareSheet();
+    };
+
+    mobileMediaQuery.addEventListener('change', closeWhenLeavingMobile);
+    return () => mobileMediaQuery.removeEventListener('change', closeWhenLeavingMobile);
+  }, [closeShareSheet, isShareSheetOpen]);
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     if (isNavigating.current) return;
@@ -207,6 +439,8 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
       if (exitTimer.current) window.clearTimeout(exitTimer.current);
       if (enterTimer.current) window.clearTimeout(enterTimer.current);
       if (resetTimer.current) window.clearTimeout(resetTimer.current);
+      if (copyFeedbackTimer.current) window.clearTimeout(copyFeedbackTimer.current);
+      if (shareSheetMotionTimer.current) window.clearTimeout(shareSheetMotionTimer.current);
     };
   }, []);
 
@@ -258,7 +492,19 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
     : Math.max(0.84, 1 - Math.abs(swipeOffset) / 560);
 
 
+  const encodedShareUrl = encodeURIComponent(shareUrl);
+  const encodedShareText = encodeURIComponent(shareText);
+  const encodedShareTitle = encodeURIComponent(shareTitle);
+  const shareSheetMotionClass = shareSheetMotionPhase === 'dragging'
+    ? styles.mobileShareSheetDragging
+    : shareSheetMotionPhase === 'resetting'
+      ? styles.mobileShareSheetResetting
+      : shareSheetMotionPhase === 'closing'
+        ? styles.mobileShareSheetClosing
+        : '';
+
   return(
+    <>
     <div className={styles.modalPortaoComProbContainer} onClick={onClose}>
       <div className={styles.modalNavigationShell} onClick={(e) => e.stopPropagation()}>
         {hasPrevious && (
@@ -343,6 +589,19 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
         </div>
         <span className={styles.modalPortaoComProbBtnClose} onClick={onClose} ><X  size={14} strokeWidth={4}/></span>
 
+        <button
+          ref={shareButtonRef}
+          type="button"
+          className={styles.mobileShareButton}
+          onClick={openShareSheet}
+          onTouchStart={(event) => event.stopPropagation()}
+          aria-label={`Compartilhar ${activeSolucao.title}`}
+          aria-haspopup="dialog"
+          aria-expanded={isShareSheetOpen}
+        >
+          <Share2 aria-hidden="true" />
+        </button>
+
         <nav className={styles.mobileNavigationFooter} aria-label="Navegação entre publicações">
           {hasPrevious && (
             <button
@@ -385,5 +644,80 @@ export function ModalPortaoComProblemas( { solucao, solucoes, onClose, modalAber
         )}
       </div>
     </div>
+    {isShareSheetOpen && typeof document !== 'undefined' && createPortal(
+      <div className={styles.mobileShareOverlay} onClick={closeShareSheet}>
+        <section
+          ref={shareSheetRef}
+          className={`${styles.mobileShareSheet} ${shareSheetMotionClass}`}
+          style={{ transform: `translate3d(0, ${shareSheetOffset}px, 0)` }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-share-title"
+          tabIndex={-1}
+          onClick={(event) => event.stopPropagation()}
+        >
+          <header
+            className={styles.mobileShareDragArea}
+            onPointerDown={handleShareSheetPointerDown}
+            onPointerMove={handleShareSheetPointerMove}
+            onPointerUp={handleShareSheetPointerEnd}
+            onPointerCancel={handleShareSheetPointerCancel}
+          >
+            <span className={styles.mobileShareHandle} aria-hidden="true" />
+            <h2 id="mobile-share-title" className={styles.mobileShareTitle}>Compartilhar</h2>
+          </header>
+
+          <div className={styles.mobileShareOptions}>
+            <a
+              className={styles.mobileShareOption}
+              href={`https://wa.me/?text=${encodedShareText}%0A${encodedShareUrl}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeShareSheet}
+            >
+              <span className={`${styles.mobileShareOptionIcon} ${styles.whatsappShareIcon}`}><FaWhatsapp aria-hidden="true" /></span>
+              <span>WhatsApp</span>
+            </a>
+
+            <a
+              className={styles.mobileShareOption}
+              href={`https://t.me/share/url?url=${encodedShareUrl}&text=${encodedShareText}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeShareSheet}
+            >
+              <span className={`${styles.mobileShareOptionIcon} ${styles.telegramShareIcon}`}><FaTelegramPlane aria-hidden="true" /></span>
+              <span>Telegram</span>
+            </a>
+
+            <a
+              className={styles.mobileShareOption}
+              href={`mailto:?subject=${encodedShareTitle}&body=${encodedShareText}%0A%0A${encodedShareUrl}`}
+              onClick={closeShareSheet}
+            >
+              <span className={`${styles.mobileShareOptionIcon} ${styles.emailShareIcon}`}><Mail aria-hidden="true" /></span>
+              <span>E-mail</span>
+            </a>
+
+            <button type="button" className={styles.mobileShareOption} onClick={handleCopyLink}>
+              <span className={`${styles.mobileShareOptionIcon} ${styles.copyShareIcon}`}>
+                {copyFeedback === 'Link copiado!' ? <Check aria-hidden="true" /> : <Link2 aria-hidden="true" />}
+              </span>
+              <span>{copyFeedback === 'Link copiado!' ? 'Copiado' : 'Copiar link'}</span>
+            </button>
+
+            <button type="button" className={styles.mobileShareOption} onClick={handleNativeShare}>
+              <span className={`${styles.mobileShareOptionIcon} ${styles.moreShareIcon}`}><Ellipsis aria-hidden="true" /></span>
+              <span>Mais opções</span>
+            </button>
+          </div>
+
+          <p className={styles.mobileShareFeedback} aria-live="polite">{copyFeedback}</p>
+          <button type="button" className={styles.mobileShareCancel} onClick={closeShareSheet}>Cancelar</button>
+        </section>
+      </div>,
+      document.body
+    )}
+    </>
   )
 }
