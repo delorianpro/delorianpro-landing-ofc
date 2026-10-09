@@ -342,6 +342,7 @@
   .modalPortaoComProbContainer{
     padding: 0.1rem 0.2rem;
     z-index: 1000;
+    height: 100dvh;
   }
   .modalNavigationShell{
     width: 100%;
