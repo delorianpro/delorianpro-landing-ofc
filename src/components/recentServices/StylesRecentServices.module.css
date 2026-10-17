@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   padding: 7.5rem 0 6.5rem;
   background:
     radial-gradient(circle at 100% 0%, rgba(3, 17, 254, 0.06), transparent 30rem),
@@ -79,9 +79,9 @@
   margin-top: 0.8rem;
   color: #46577c;
   font-family: var(--font-roboto), sans-serif;
-  font-size: 1.15rem;
+  font-size: clamp(1.1rem, 1.65vw, 1.5rem);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.45;
 }
 
 .allServicesLink {
@@ -135,10 +135,13 @@
   gap: 1.25rem;
 }
 
+.mobileCarouselNavigation {
+  display: none;
+}
+
 .card {
   display: flex;
   min-width: 0;
-  height: 100%;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(1, 5, 73, 0.09);
@@ -226,7 +229,6 @@
 
 .cardBody {
   display: flex;
-  min-height: 19.5rem;
   flex: 1;
   flex-direction: column;
   padding: 1.2rem 1.25rem 0;
@@ -304,7 +306,6 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  margin-top: auto;
   padding-bottom: 1.2rem;
   color: #5c6c88;
   font-family: var(--font-roboto), sans-serif;
@@ -334,6 +335,7 @@
 }
 
 .cardFooter {
+  margin-top: auto;
   padding: 1rem 0;
   border-top: 1px solid #e9edf4;
 }
@@ -376,11 +378,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .section{
     margin-top: 1.8rem;
   }
-}
+} */
 @media (max-width: 800px) {
   .section {
     padding: 4.5rem 0 4rem;
@@ -409,7 +411,7 @@
 
   .sectionDescription {
     margin-top: 0.7rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.55;
   }
 
@@ -452,8 +454,11 @@
     transform: none;
   }
 
-  .cardBody {
-    min-height: 19rem;
+}
+@media (max-width: 760px) {
+  .sectionDescription {
+    font-size: 1.13rem;
+    line-height: 1.42;
   }
 }
 @media(max-width: 700px){
@@ -466,9 +471,9 @@
     gap: 0.55rem;
   }
 
-  /* .sectionDescription{
-    margin-left: 1.5rem;
-  } */
+  .sectionDescription{
+    max-width: 35rem;
+  }
 
 }
 @media(max-width: 600px){
@@ -485,6 +490,79 @@
     padding: 0 1.25rem;
   }
 }
+@media (max-width: 499.98px) {
+  .card {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobileCarouselNavigation {
+    display: flex;
+    min-height: 3.7rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding-top: 0.9rem;
+  }
+
+  .swipeHint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    color: #526381;
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: opacity 180ms ease, visibility 180ms ease;
+  }
+
+  .swipeHint svg {
+    width: 1rem;
+    height: 1rem;
+    color: #0311fe;
+    stroke-width: 1.8;
+  }
+
+  .swipeHintHidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .carouselPagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.05rem;
+  }
+
+  .carouselPagination button {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.385rem;
+    border: 0;
+    border-radius: 999px;
+    background-clip: content-box;
+    cursor: pointer;
+    transition: width 180ms ease, background-color 180ms ease;
+  }
+
+  .carouselPagination button:focus-visible {
+    outline: 2px solid rgba(3, 17, 254, 0.45);
+    outline-offset: 1px;
+  }
+
+  .paginationDot {
+    background: rgba(3, 17, 254, 0.2);
+  }
+
+  .carouselPagination .activePaginationDot {
+    width: 1.6rem;
+    height: 0.6rem;
+    background: #0311fe;
+  }
+}
 @media (min-width: 600px) and (max-width: 700px) {
   .titleRow {
     align-items: flex-start;
@@ -499,15 +577,15 @@
     margin-top: -1.5rem;
   }
 }
-@media (max-width: 550px) {
-  .section{
-    margin-top: 0.5rem;
+@media (max-width: 480px) {
+   .sectionDescription{
+      max-width: 22rem;
   }
 }
 @media (max-width: 400px) {
-  .container {
+  /* .container {
     padding: 0 1rem;
-  }
+  } */
 
   .cards {
     width: calc(100% + 1rem);
@@ -532,6 +610,11 @@
   .allServicesLink,
   .allServicesLink svg,
   .detailsLink svg {
+    transition: none;
+  }
+
+  .swipeHint,
+  .carouselPagination button {
     transition: none;
   }
 

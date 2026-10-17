@@ -7,6 +7,7 @@ import {
   Check,
   MapPin,
   MessageCircle,
+  Play,
   X,
 } from "lucide-react";
 import {
@@ -160,10 +161,19 @@ export function RecentServiceModal({
   const images = service.images ?? [];
   const galleryItems: Array<RecentServiceImage | undefined> =
     images.length > 0 ? images : [undefined, undefined, undefined];
+  const videoIndex = galleryItems.length;
+  const isVideoSelected = Boolean(service.youtubeVideo) &&
+    selectedImageIndex === videoIndex;
   const selectedImage = images[selectedImageIndex];
+  const youtubeThumbnail = service.youtubeVideo
+    ? `https://i.ytimg.com/vi/${encodeURIComponent(service.youtubeVideo)}/hqdefault.jpg`
+    : undefined;
+  const youtubeEmbed = service.youtubeVideo
+    ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(service.youtubeVideo)}?rel=0`
+    : undefined;
   const phoneNumber = "5541985011909";
   const genericWhatsAppMessage =
-    "Olá, equipe Delorian! Gostaria de falar sobre um serviço.";
+    `Olá, equipe Delorian! Vi o serviço ${service.title} no site e gostaria de obter mais informações.`;
   const similarServiceMessage =
     service.whatsappMessage ||
     `Olá, equipe Delorian! Gostaria de solicitar um serviço semelhante a: ${service.title}.`;
@@ -201,7 +211,18 @@ export function RecentServiceModal({
           <div className={styles.layout}>
             <div className={styles.galleryColumn}>
               <div className={styles.mainMedia}>
-                <ModalImage image={selectedImage} category={service.category} />
+                {isVideoSelected && isOpen && youtubeEmbed ? (
+                  <iframe
+                    className={styles.videoPlayer}
+                    src={youtubeEmbed}
+                    title={`Vídeo do serviço: ${service.title}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                ) : (
+                  <ModalImage image={selectedImage} category={service.category} />
+                )}
               </div>
 
               <div className={styles.thumbnails} aria-label="Galeria do serviço">
@@ -229,6 +250,27 @@ export function RecentServiceModal({
                     )}
                   </button>
                 ))}
+                {service.youtubeVideo && youtubeThumbnail && (
+                  <button
+                    type="button"
+                    className={`${styles.thumbnail} ${
+                      isVideoSelected ? styles.selectedThumbnail : ""
+                    }`}
+                    onClick={() => setSelectedImageIndex(videoIndex)}
+                    aria-label="Visualizar vídeo do serviço"
+                    aria-pressed={isVideoSelected}
+                  >
+                    <span
+                      className={styles.videoThumbnail}
+                      style={{ backgroundImage: `url("${youtubeThumbnail}")` }}
+                      aria-hidden="true"
+                    >
+                      <span className={styles.videoPlayIcon}>
+                        <Play />
+                      </span>
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
 

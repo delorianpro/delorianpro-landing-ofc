@@ -20,6 +20,7 @@ import { SobreNos } from "@/components/sobreNos/SobreNos";
 import { ScrollToTopButton } from "@/components/scrollToTopButton/ScrollToTopButton";
 
 import { useState } from "react"; //novo
+import { RecentServices } from "@/components/recentServices/RecentServices";
 
 
 
@@ -35,7 +36,7 @@ export default function Home() {
       <HeroSection />
       <ServicosDelorian />
       <BannerSindico setOpenIndex={setOpenIndex}/>
-      {/* <RecentServices /> */}
+      <RecentServices />
       <PlansDelorian />
       <ChamaDelorian />
       <CuritibaRegiao />
